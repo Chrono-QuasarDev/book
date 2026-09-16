@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aurelia Bay — Luxury Oceanfront Resort &amp; Spa | Book Direct</title>
-<meta name="description" content="A private stretch of coastline where the Atlantic meets the cliffs. Ocean-view suites, two signature restaurants, a cliffside spa. Book direct for the best rate.">
-<meta name="theme-color" content="#0d1b2a">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nikops Royal Hotel — Comfortable Stays near Tuba Junction, Accra | Book Direct</title>
+    <meta name="description" content="Nikops Royal Hotel, Tuba-Kokrobite Road off Kasoa Road, Ngleshi Amanfro, Greater Accra. En-suite rooms, outdoor swimming pool, on-site restaurant and bar. Rated 4.6/5 by guests. Call +233 59 833 8215.">
+    <meta name="theme-color" content="#0d1b2a">
+    <meta name="geo.region" content="GH-AA">
+    <meta name="geo.placename" content="Ngleshi Amanfro, Greater Accra">
 
-<!-- Social / OG — conversion matters before the click, too -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aurelia Bay — Luxury Oceanfront Resort &amp; Spa">
-<meta property="og:description" content="Ocean-view suites, a cliffside spa, and two signature restaurants on a private bay.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nikops Royal Hotel — Tuba Junction, Accra">
+    <meta property="og:description" content="En-suite rooms, outdoor pool, restaurant and bar on the Tuba-Kokrobite Road. Rated 4.6/5 by guests.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80">
 
-<!-- PERF: warm up the image + font origins before the parser reaches them.
-     A production build would serve images from our own CDN (Cloudflare/Fastly)
-     with AVIF/WebP negotiation, and inline critical CSS in <head>. -->
-<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- PERF: the LCP element is the hero image — fetch it at the highest priority. -->
-<link rel="preload" as="image" fetchpriority="high"
-      href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=80">
+    <!-- PERF: warm up the image + font origins before the parser reaches them.
+        A production build would serve images from our own CDN with AVIF/WebP
+        negotiation, and inline critical CSS in <head>. -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- PERF: the LCP element is the hero image — fetch it at the highest priority. -->
+    <link rel="preload" as="image" fetchpriority="high"
+          href="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80">
 
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
-<!-- SEO: rich result for a hotel. Real builds inject live pricing/ratings. -->
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Resort","name":"Aurelia Bay","starRating":{"@type":"Rating","ratingValue":"5"},
-"priceRange":"$$$$","address":{"@type":"PostalAddress","addressLocality":"Aurelia Bay","addressCountry":"PT"},
-"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"2184"}}
-</script>
-</head>
+    <!-- SEO: verified structured data. Rating, address, phone and policies all
+        match the live business record — never inflate these. -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Hotel",
+      "name":"Nikops Royal Hotel",
+      "starRating":{"@type":"Rating","ratingValue":"2"},
+      "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","bestRating":"5"},
+      "telephone":"+233598338215",
+      "email":"nikopsroyalhotel@gmail.com",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Tuba-Kokrobite Road, near Tuba Junction, off Kasoa Road",
+        "addressLocality":"Ngleshi Amanfro",
+        "addressRegion":"Greater Accra",
+        "addressCountry":"GH"
+      },
+      "checkinTime":"12:00","checkoutTime":"12:00",
+      "petsAllowed":false,
+      "smokingAllowed":false,
+      "amenityFeature":[
+        {"@type":"LocationFeatureSpecification","name":"Swimming pool","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Restaurant","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Bar","value":true},
+        {"@type":"LocationFeatureSpecification","name":"Private bathroom","value":true}
+      ]
+    }
+    </script>
+  </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
 <!-- ============================================================
-     HEADER — transparent over the hero, condenses to a pill on scroll
+     HEADER
      ============================================================ -->
 <header class="header">
   <div class="header__inner">
-    <a class="header__brand" href="index.html" aria-label="Aurelia Bay — home">
-      <span class="header__brand-name">Aurelia Bay</span>
-      <span class="header__brand-sub">Resort &amp; Spa</span>
+    <a class="header__brand" href="index.html" aria-label="Nikops Royal Hotel — home">
+      <span class="header__brand-name">Nikops Royal</span>
+      <span class="header__brand-sub">Hotel · Accra</span>
     </a>
 
     <button class="header__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
@@ -52,9 +76,9 @@
 
     <nav class="header__nav" id="primary-nav" aria-label="Primary">
       <a class="header__link" href="index.html" aria-current="page">Home</a>
-      <a class="header__link" href="rooms.html">Rooms &amp; Suites</a>
-      <a class="header__link" href="#dining">Dining</a>
-      <a class="header__link" href="#spa">Spa</a>
+      <a class="header__link" href="rooms.html">Rooms</a>
+      <a class="header__link" href="#dining">Restaurant &amp; Bar</a>
+      <a class="header__link" href="#pool">Pool</a>
       <a class="header__link" href="about.html">About</a>
       <a class="header__link" href="contact.html">Contact</a>
       <a class="header__cta" href="booking.html">Book Now</a>
@@ -67,41 +91,39 @@
 <!-- ============================================================
      1 · HERO — full viewport, Ken Burns, floating booking bar
      ============================================================ -->
-<section class="hero" aria-label="Welcome to Aurelia Bay">
+<section class="hero" aria-label="Welcome to Nikops Royal Hotel">
   <div class="hero__media">
     <!-- IMAGE PIPELINE NOTE
          Production markup would be:
            <picture>
-             <source type="image/avif" srcset="hero-960.avif 960w, hero-1920.avif 1920w, hero-2560.avif 2560w" sizes="100vw">
-             <source type="image/webp" srcset="hero-960.webp 960w, hero-1920.webp 1920w, hero-2560.webp 2560w" sizes="100vw">
+             <source type="image/avif" srcset="hero-960.avif 960w, hero-1920.avif 1920w" sizes="100vw">
+             <source type="image/webp" srcset="hero-960.webp 960w, hero-1920.webp 1920w" sizes="100vw">
              <img src="hero-1920.jpg" ...>   <-- JPG fallback
            </picture>
-         Unsplash already negotiates WebP/AVIF via `auto=format`, so the
-         srcset below is width-based only. -->
+         Unsplash negotiates WebP/AVIF via `auto=format`, so the srcset
+         below is width-based only. REPLACE THESE with photographs of the
+         actual property before launch. -->
     <img
-      src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=80"
-      srcset="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=960&q=70 960w,
-              https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1600&q=75 1600w,
-              https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2400&q=80 2400w"
+      src="./images/pool2.jpg"
+      srcset="./images/pool2.jpg"
       sizes="100vw"
-      alt="Infinity pool on a clifftop terrace overlooking the open ocean at sunrise"
+      alt="The hotel's outdoor swimming pool lit at dusk, with loungers set out along the terrace"
       width="2400" height="1600" fetchpriority="high" decoding="async">
   </div>
   <div class="hero__overlay" aria-hidden="true"></div>
 
   <div class="wrap">
     <div class="hero__content">
-      <span class="eyebrow" data-reveal>Private Bay · Atlantic Coast</span>
+      <span class="eyebrow" data-reveal>Tuba Junction · Off Kasoa Road · Greater Accra</span>
       <h1 class="hero__title" data-reveal data-reveal-delay="1">
-        Where the horizon<br><em>belongs to you.</em>
+        Rest well,<br><em>just off the Kasoa Road.</em>
       </h1>
       <p class="hero__lede" data-reveal data-reveal-delay="2">
-        Forty-two ocean-facing suites carved into the cliffs. A spa above the waterline,
-        two signature kitchens, and a stretch of sand that never sees a crowd.
+        En-suite rooms, an outdoor swimming pool, and a kitchen that serves breakfast
+        the way you ask for it. Twenty minutes from Accra Central, and a world quieter.
       </p>
 
-      <!-- Floating search bar — sits directly on the hero, the single
-           highest-intent element on the page. -->
+      <!-- Floating search bar — the highest-intent element on the page -->
       <form class="booking" data-booking data-reveal data-reveal-delay="3"
             aria-label="Check availability">
         <div class="booking__grid">
@@ -127,10 +149,10 @@
             <label class="booking__label" for="roomtype">Room type</label>
             <select class="booking__input" id="roomtype" name="roomtype">
               <option value="any" selected>Any room</option>
-              <option value="ocean-deluxe">Ocean Deluxe</option>
-              <option value="cliff-suite">Cliff Suite</option>
-              <option value="garden-villa">Garden Villa</option>
-              <option value="penthouse">Penthouse</option>
+              <option value="standard">Standard Double</option>
+              <option value="twin">Standard Twin</option>
+              <option value="executive">Executive Room</option>
+              <option value="family">Family Room</option>
             </select>
           </div>
           <button class="btn btn--gold booking__submit" type="submit">Check Availability</button>
@@ -142,31 +164,31 @@
   <div class="hero__cue" aria-hidden="true"><i></i>Scroll</div>
 </section>
 
-<!-- Trust strip — social proof immediately below the fold -->
+<!-- Trust strip — verified facts only -->
 <div class="marquee">
   <div class="wrap marquee__row">
-    <span><i></i>Forbes Five-Star 2026</span>
-    <span><i></i>Condé Nast Gold List</span>
-    <span><i></i>4.9 / 5 · 2,184 reviews</span>
-    <span><i></i>Best rate guaranteed</span>
-    <span><i></i>Free cancellation to 48h</span>
+    <span><i></i>Rated 4.6 / 5 by guests</span>
+    <span><i></i>Outdoor swimming pool</span>
+    <span><i></i>Restaurant &amp; bar on site</span>
+    <span><i></i>Breakfast served daily</span>
+    <span><i></i>Non-smoking throughout</span>
   </div>
 </div>
 
 <!-- ============================================================
-     2 · EXPERIENCE THE ESCAPE — horizontal carousel
+     2 · EXPERIENCE — horizontal carousel
      ============================================================ -->
 <section class="carousel" data-carousel aria-roledescription="carousel"
-         aria-label="Experience the escape" tabindex="0">
+         aria-label="Around the hotel" tabindex="0">
   <div class="wrap">
     <div class="split-head" data-reveal>
       <div>
-        <span class="eyebrow eyebrow--light">Experience the Escape</span>
-        <h2 class="mt-16">Seven ways to lose<br>track of the day.</h2>
+        <span class="eyebrow eyebrow--light">Around the Hotel</span>
+        <h2 class="mt-16">Everything you need,<br>and nothing you don't.</h2>
       </div>
       <p class="lede lede--light" style="max-width:38ch">
-        Nothing here is scheduled unless you want it to be. Wander in any direction and the
-        resort rearranges itself around you.
+        A straightforward, comfortable place to stay on the Tuba-Kokrobite Road —
+        with a pool to come back to at the end of the day.
       </p>
     </div>
   </div>
@@ -177,26 +199,24 @@
 
         <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="1 of 7">
           <img loading="lazy" decoding="async" width="900" height="1200"
-            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80"
-            srcset="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=70 600w,
-                    https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80 1000w"
+            src="./images/pool.jpg"
+            srcset="./images/pool.jpg"
             sizes="(max-width:700px) 86vw, (max-width:1100px) 46vw, 32vw"
-            alt="Guests swimming in a still infinity pool that meets the sea line at dusk">
+            alt="The outdoor swimming pool with sun loungers arranged along the poolside terrace">
           <div class="carousel__caption">
-            <strong>The pool that forgets where the sea begins</strong>
-            <span>Heated to 29°C, open from first light until the last star.</span>
+            <strong>The pool, open through the afternoon</strong>
+            <span>Loungers, shade, and somewhere to cool off after the drive.</span>
           </div>
         </li>
 
         <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 7">
           <img loading="lazy" decoding="async" width="900" height="1200"
-            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80"
-            onerror="this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80'"
+            src="./images/room1.jpg"
             sizes="(max-width:700px) 86vw, (max-width:1100px) 46vw, 32vw"
-            alt="Therapist preparing warm stones on a folded towel in a candlelit spa treatment room">
+            alt="A guest room made up with clean white bedding and a bedside lamp">
           <div class="carousel__caption">
-            <strong>An hour that undoes a year</strong>
-            <span>Cliffside treatment rooms with the windows left open.</span>
+            <strong>Rooms kept simple and clean</strong>
+            <span>Every room en-suite, with a private bathroom and shower.</span>
           </div>
         </li>
 
@@ -204,54 +224,54 @@
           <img loading="lazy" decoding="async" width="900" height="1200"
             src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
             sizes="(max-width:700px) 86vw, (max-width:1100px) 46vw, 32vw"
-            alt="Candlelit restaurant interior with linen-set tables and warm pendant lighting">
+            alt="The on-site restaurant dining room with tables set for service">
           <div class="carousel__caption">
-            <strong>Dinner that runs long on purpose</strong>
-            <span>Two kitchens, one cellar, no rush between courses.</span>
+            <strong>The restaurant, open to guests and visitors</strong>
+            <span>Breakfast, lunch and dinner without leaving the grounds.</span>
           </div>
         </li>
 
         <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 7">
           <img loading="lazy" decoding="async" width="900" height="1200"
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+            src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80"
             sizes="(max-width:700px) 86vw, (max-width:1100px) 46vw, 32vw"
-            alt="Empty white sand beach with clear turquoise water lapping the shoreline">
+            alt="The bar counter with stools and bottles lined along the back shelf">
           <div class="carousel__caption">
-            <strong>Sand you will likely have to yourself</strong>
-            <span>Six hundred metres of private shoreline, attended all day.</span>
+            <strong>A cold drink at the bar</strong>
+            <span>Open into the evening, for guests and their visitors alike.</span>
           </div>
         </li>
 
         <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="5 of 7">
           <img loading="lazy" decoding="async" width="900" height="1200"
-            src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=80"
+            src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=80"
             sizes="(max-width:700px) 86vw, (max-width:1100px) 46vw, 32vw"
-            alt="Suite interior with an unmade linen bed facing floor-to-ceiling windows and an ocean view">
+            alt="A full cooked breakfast plated with eggs, toast and grilled tomato">
           <div class="carousel__caption">
-            <strong>Rooms built around the view, not the bed</strong>
-            <span>Every suite faces water. No exceptions, no courtyard rooms.</span>
+            <strong>Breakfast, three ways</strong>
+            <span>À la carte, Continental, or a Full English — your choice each morning.</span>
           </div>
         </li>
 
         <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="6 of 7">
           <img loading="lazy" decoding="async" width="900" height="1200"
-            src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=900&q=80"
+            src="./images/bathroom.jpg"
             sizes="(max-width:700px) 86vw, (max-width:1100px) 46vw, 32vw"
-            alt="Low lounge chairs on a terrace silhouetted against an orange and violet sunset">
+            alt="A private en-suite bathroom with a walk-in shower and folded towels">
           <div class="carousel__caption">
-            <strong>The lounge hour, every evening at seven</strong>
-            <span>Cold negronis, live double bass, the sun doing the rest.</span>
+            <strong>Private bathroom in every room</strong>
+            <span>Standalone shower, hot water, fresh towels daily.</span>
           </div>
         </li>
 
         <li class="carousel__slide" role="group" aria-roledescription="slide" aria-label="7 of 7">
           <img loading="lazy" decoding="async" width="900" height="1200"
-            src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=900&q=80"
+            src="./images/terrace.jpg"
             sizes="(max-width:700px) 86vw, (max-width:1100px) 46vw, 32vw"
-            alt="Sailing boat crossing open blue water on a bright, cloudless afternoon">
+            alt="Chairs set out on the terrace facing a warm orange sunset">
           <div class="carousel__caption">
-            <strong>Out past the headland by noon</strong>
-            <span>Skippered day sails, sea caves, and a lunch basket aboard.</span>
+            <strong>Evenings on the terrace</strong>
+            <span>The best hour of the Accra day, and it costs nothing.</span>
           </div>
         </li>
       </ul>
@@ -271,32 +291,33 @@
 </section>
 
 <!-- ============================================================
-     3 · ROOMS & SUITES — asymmetric bento grid
+     3 · ROOMS — asymmetric bento grid
+     NOTE: room names, sizes and rates below are PLACEHOLDERS pending
+     the property's real rate card. Contact/policy data is verified.
      ============================================================ -->
 <section class="section section--sand" id="rooms">
   <div class="wrap">
     <div class="split-head" data-reveal>
       <div>
-        <span class="eyebrow">Our Rooms &amp; Suites</span>
-        <h2 class="mt-16">Forty-two rooms.<br>Forty-two sea views.</h2>
+        <span class="eyebrow">Our Rooms</span>
+        <h2 class="mt-16">Every room en-suite.<br>Every room yours.</h2>
       </div>
-      <a class="btn btn--line" href="rooms.html">View all accommodation</a>
+      <a class="btn btn--line" href="rooms.html">View all rooms</a>
     </div>
 
     <div class="bento">
 
-      <!-- Hero room card -->
       <article class="room bento__item--xl" data-reveal>
         <img loading="lazy" decoding="async" width="1400" height="900"
           src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80"
           srcset="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=70 800w,
                   https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80 1600w"
           sizes="(max-width:1000px) 100vw, 62vw"
-          alt="Panoramic penthouse living room with a wraparound terrace above the ocean">
+          alt="The executive room with a seating area beside the window and a large bed">
         <div class="room__body">
           <div class="room__meta">
-            <span class="room__tag">Signature</span>
-            <span class="stars" aria-label="Rated 5 out of 5">
+            <span class="room__tag">Largest room</span>
+            <span class="stars" aria-label="Rated 4.6 out of 5 by guests">
               <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
               <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
               <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
@@ -304,21 +325,21 @@
               <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
             </span>
           </div>
-          <h3 class="room__name">The Aurelia Penthouse</h3>
-          <p class="room__price"><b>$1,850</b> / night · 180 m² · Sleeps 4</p>
+          <h3 class="room__name">Executive Room</h3>
+          <p class="room__price"><b>GH₵ 650</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="room bento__item--tall" data-reveal data-reveal-delay="1">
         <img loading="lazy" decoding="async" width="800" height="1200"
-          src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"
+          src="./images/room3.jpg"
           sizes="(max-width:1000px) 100vw, 32vw"
-          alt="Cliff suite bedroom with a freestanding tub positioned beside a full-height window">
+          alt="A double room with a made bed, bedside table and window light">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Ocean Front</span></div>
-          <h3 class="room__name">Cliff Suite</h3>
-          <p class="room__price"><b>$980</b> / night · 74 m²</p>
+          <div class="room__meta"><span class="room__tag">Most booked</span></div>
+          <h3 class="room__name">Standard Double</h3>
+          <p class="room__price"><b>GH₵ 380</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -327,11 +348,11 @@
         <img loading="lazy" decoding="async" width="1000" height="700"
           src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1100&q=80"
           sizes="(max-width:1000px) 100vw, 46vw"
-          alt="Ocean deluxe room with pale linens, timber floors and a private balcony">
+          alt="A twin room with two single beds separated by a bedside table">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Most booked</span></div>
-          <h3 class="room__name">Ocean Deluxe</h3>
-          <p class="room__price"><b>$640</b> / night · 46 m²</p>
+          <div class="room__meta"><span class="room__tag">Two beds</span></div>
+          <h3 class="room__name">Standard Twin</h3>
+          <p class="room__price"><b>GH₵ 420</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -340,24 +361,24 @@
         <img loading="lazy" decoding="async" width="1000" height="700"
           src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1100&q=80"
           sizes="(max-width:1000px) 100vw, 46vw"
-          alt="Garden villa terrace shaded by olive trees with a private plunge pool">
+          alt="A ground-floor room opening onto the garden and pool terrace">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Private pool</span></div>
-          <h3 class="room__name">Garden Villa</h3>
-          <p class="room__price"><b>$1,240</b> / night · 120 m²</p>
+          <div class="room__meta"><span class="room__tag">Pool side</span></div>
+          <h3 class="room__name">Poolside Room</h3>
+          <p class="room__price"><b>GH₵ 520</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="room bento__item--sm" data-reveal>
         <img loading="lazy" decoding="async" width="800" height="1000"
-          src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80"
+          src="./images/room2.jpg"
           sizes="(max-width:1000px) 100vw, 32vw"
-          alt="Corner junior suite with a curved reading nook facing the bay">
+          alt="A compact single room with a desk beneath the window">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Couples</span></div>
-          <h3 class="room__name">Bay Junior Suite</h3>
-          <p class="room__price"><b>$720</b> / night · 52 m²</p>
+          <div class="room__meta"><span class="room__tag">Solo travellers</span></div>
+          <h3 class="room__name">Standard Single</h3>
+          <p class="room__price"><b>GH₵ 300</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -366,11 +387,11 @@
         <img loading="lazy" decoding="async" width="1200" height="800"
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
           sizes="(max-width:1000px) 100vw, 46vw"
-          alt="Two-bedroom family residence with an open-plan lounge opening onto a sun terrace">
+          alt="A family room with a double bed and an additional single bed">
         <div class="room__body">
           <div class="room__meta"><span class="room__tag">Families</span></div>
-          <h3 class="room__name">Headland Residence</h3>
-          <p class="room__price"><b>$1,480</b> / night · 150 m² · Sleeps 6</p>
+          <h3 class="room__name">Family Room</h3>
+          <p class="room__price"><b>GH₵ 750</b> / night · Sleeps 4 · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -380,91 +401,87 @@
 </section>
 
 <!-- ============================================================
-     4 · PARALLAX BREAK — "A Day at Aurelia Bay"
+     4 · PARALLAX BREAK
      ============================================================ -->
-<section class="parallax" aria-label="A day at Aurelia Bay">
+<section class="parallax" aria-label="A stay at Nikops Royal Hotel">
   <div class="parallax__media" data-parallax="0.3">
     <img loading="lazy" decoding="async" width="2000" height="1200"
-      src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=80"
-      srcset="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=70 1200w,
-              https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=80 2000w"
+      src="./images/room3.jpg"
+      srcset="./images/room3.jpg"
       sizes="100vw"
-      alt="Aerial view of the resort's white terraces stepping down a cliff to a turquoise bay">
+      alt="The swimming pool seen from the terrace in the late afternoon sun">
   </div>
   <div class="parallax__overlay" aria-hidden="true"></div>
   <div class="wrap">
     <blockquote class="parallax__quote" data-reveal>
-      A day here has no edges.
+      Room to breathe, close to town.
     </blockquote>
-    <p class="parallax__attrib" data-reveal data-reveal-delay="1">A Day at Aurelia Bay</p>
+    <p class="parallax__attrib" data-reveal data-reveal-delay="1">A stay at Nikops Royal</p>
   </div>
 </section>
 
 <!-- ============================================================
-     5 · DINING — alternating image / text splits
+     5 · RESTAURANT & BAR — alternating image / text splits
      ============================================================ -->
 <section class="section section--cream" id="dining">
   <div class="wrap">
     <div class="section__head section__head--center" data-reveal>
-      <span class="eyebrow eyebrow--center">Dining &amp; Culinary</span>
-      <h2>Two kitchens, one obsession.</h2>
-      <p class="lede">Everything is caught, grown or pressed within forty kilometres of the gate —
-        then treated with as little interference as the chef can manage.</p>
+      <span class="eyebrow eyebrow--center">Restaurant &amp; Bar</span>
+      <h2>Eat here. It's easier.</h2>
+      <p class="lede">The kitchen and bar are both on site, so there is no need to go back out
+        on the Kasoa Road once you have arrived.</p>
     </div>
 
     <!-- Venue one: image left, text right -->
     <div class="split" data-reveal>
       <figure class="split__media">
-        <span class="split__badge">Michelin ★ · Since 2019</span>
+        <span class="split__badge">Open daily</span>
         <img loading="lazy" decoding="async" width="1200" height="960"
-          src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80"
-          srcset="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=70 700w,
-                  https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1400&q=80 1400w"
+          src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=80"
+          srcset="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=80"
           sizes="(max-width:900px) 100vw, 52vw"
-          alt="Plated seafood course dressed with herbs and citrus on a dark ceramic dish">
+          alt="The hotel restaurant with tables laid out and chairs arranged for service">
       </figure>
       <div class="split__body">
-        <span class="eyebrow">Signature Restaurant</span>
-        <h3>Solane</h3>
+        <span class="eyebrow">The Restaurant</span>
+        <h3>Breakfast, three ways</h3>
         <p class="lede">
-          Nine courses, twenty-eight seats, and a pass you can watch from every one of them.
-          Chef Inês Caldeira cooks the bay itself — line-caught turbot, sea fennel from the dunes,
-          and olive oil pressed by the family two coves north.
+          Choose how you want to start: <strong>à la carte</strong> from the morning menu,
+          a lighter <strong>Continental</strong> spread, or a <strong>Full English</strong>
+          if the day ahead calls for it. Lunch and dinner are served in the same room,
+          and the kitchen is happy to work around what you need.
         </p>
         <div class="split__facts">
-          <div class="split__fact"><span>Hours</span><strong>19:00 – 22:30</strong></div>
-          <div class="split__fact"><span>Format</span><strong>Tasting menu</strong></div>
-          <div class="split__fact"><span>From</span><strong>$185 pp</strong></div>
+          <div class="split__fact"><span>Breakfast</span><strong>Á la carte · Continental · Full English</strong></div>
+          <div class="split__fact"><span>Open to</span><strong>Guests &amp; visitors</strong></div>
         </div>
-        <a class="btn btn--navy mt-32" href="#booking">Explore Menus</a>
+        <a class="btn btn--navy mt-32" href="contact.html">Ask About Menus</a>
       </div>
     </div>
 
     <!-- Venue two: image right, text left -->
     <div class="split split--reverse" data-reveal>
       <figure class="split__media">
-        <span class="split__badge">All day · Feet in the sand</span>
+        <span class="split__badge">Into the evening</span>
         <img loading="lazy" decoding="async" width="1200" height="960"
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
-          srcset="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=70 700w,
-                  https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80 1400w"
+          src="./images/image1.jpg"
+          srcset="./images/image1.jpg"
           sizes="(max-width:900px) 100vw, 52vw"
-          alt="Relaxed restaurant terrace with rattan chairs and linen shades open to the beach">
+          alt="The bar counter with stools pulled up and bottles on the shelf behind">
       </figure>
       <div class="split__body">
-        <span class="eyebrow">Beach Club &amp; Grill</span>
-        <h3>Pescador</h3>
+        <span class="eyebrow">The Bar</span>
+        <h3>Somewhere to sit after the drive</h3>
         <p class="lede">
-          Whole fish over charcoal, tomatoes still warm from the field, and a wine list that
-          refuses to take itself seriously. Lunch runs until the last table gives up — which,
-          in August, is somewhere around five.
+          Cold beers, soft drinks and spirits, served at the bar or brought out to the
+          poolside terrace. It stays open into the evening — which, after a day moving
+          around Accra traffic, is usually the point.
         </p>
         <div class="split__facts">
-          <div class="split__fact"><span>Hours</span><strong>12:00 – late</strong></div>
-          <div class="split__fact"><span>Format</span><strong>À la carte</strong></div>
-          <div class="split__fact"><span>From</span><strong>$65 pp</strong></div>
+          <div class="split__fact"><span>Service</span><strong>Bar &amp; poolside</strong></div>
+          <div class="split__fact"><span>Policy</span><strong>Non-smoking throughout</strong></div>
         </div>
-        <a class="btn btn--navy mt-32" href="#booking">Explore Menus</a>
+        <a class="btn btn--navy mt-32" href="contact.html">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -478,127 +495,125 @@
     <div class="section__head section__head--center" data-reveal>
       <span class="eyebrow eyebrow--center">Guest Moments</span>
       <h2 id="gram-title">Real Moments from Real Guests</h2>
-      <p class="lede">Tagged, unedited, and posted from a sun lounger. We could not have
-        photographed it better ourselves.</p>
+      <p class="lede">Tagged and posted by the people who stayed. A 4.6 out of 5 average,
+        and this is roughly what it looks like.</p>
     </div>
 
     <div class="gram" data-reveal>
-      <!-- Each tile: square crop, hover reveals heart + like count.
-           Keyboard users get the same reveal via :focus-visible. -->
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: couple on a balcony at sunrise — 2,410 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Couple leaning on a balcony rail watching the sun rise over the water">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>2,410</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/moments.jpg" aria-label="Guest photo: the swimming pool — 248 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/moments.jpg" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="A swimmer floating in the hotel's outdoor pool on a bright afternoon">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>248</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: palm-lined resort pathway — 1,884 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Palm-lined stone pathway leading toward the resort's main terrace">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>1,884</b></span>
+      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: full breakfast — 196 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="A full cooked breakfast served with eggs, sausage and toast">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>196</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: spa treatment room — 3,102 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Candlelit spa treatment room with rolled towels and a stone basin">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>3,102</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/moments1.jpg" aria-label="Guest photo: en-suite bathroom — 121 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/moments1.jpg" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="An en-suite bathroom with a walk-in shower and clean folded towels">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>121</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: grilled seafood plate — 947 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Grilled seafood plate served with lemon and fresh herbs">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>947</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/unnamed.webp" aria-label="Guest photo: drinks at the bar — 307 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/unnamed.webp" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Two cold drinks resting on a rail as the light turns golden">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>307</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: cocktails at golden hour — 1,530 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Two cocktails on a terrace rail catching the last of the golden hour light">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>1,530</b></span>
+      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: the room — 164 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="A neatly made guest room with white bedding and warm lamp light">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>164</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: swimmer in the infinity pool — 2,077 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Swimmer floating in a still infinity pool that reflects the sky">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>2,077</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/pool.jpg" aria-label="Guest photo: sunset from the terrace — 412 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/pool.jpg" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Chairs on the terrace facing an orange and violet sunset">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>412</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: family walking the shoreline — 1,209 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Family walking along the shoreline leaving footprints in wet sand">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>1,209</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/pool2.jpg" aria-label="Guest photo: morning coffee — 88 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/pool2.jpg" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Morning coffee and pastries set out on a sunlit table">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>88</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: villa at blue hour — 3,644 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Lit villa exterior glowing against a deep blue evening sky">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>3,644</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/moments4.jpg" aria-label="Guest photo: the grounds — 133 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/moments4.jpg" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="A palm-lined path leading through the hotel grounds">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>133</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: night sky over the bay — 2,988 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Star-filled night sky arcing over the dark water of the bay">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>2,988</b></span>
+      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: dinner — 175 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="A plated dinner served with fresh herbs and lemon">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>175</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: morning coffee on the terrace — 812 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Morning coffee and pastries set out on a sunlit terrace table">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>812</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/room2.jpg" aria-label="Guest photo: day out at Kokrobite — 291 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/room2.jpg" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="A family walking the shoreline on a day trip to Kokrobite beach">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>291</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: suite bathroom detail — 1,366 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Stone bathroom detail with a deep soaking tub and folded white towels">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>1,366</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/moments3.jpg" aria-label="Guest photo: morning on the balcony — 109 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/moments3.jpg" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="A couple leaning on a balcony rail early in the morning">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>109</b></span>
       </a>
-      <a class="gram__item" href="#" data-lightbox="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=1200&q=80" aria-label="Guest photo: waves against the headland — 1,042 likes">
-        <img loading="lazy" decoding="async" width="500" height="500" src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=500&q=70" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Waves breaking white against the rocky headland below the resort">
-        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>1,042</b></span>
+      <a class="gram__item" href="#" data-lightbox="./images/moments2.jpg" aria-label="Guest photo: celebrating at the hotel — 356 likes">
+        <img loading="lazy" decoding="async" width="500" height="500" src="./images/moments2.jpg" sizes="(max-width:600px) 50vw, (max-width:980px) 33vw, 16vw" alt="Friends raising glasses together at a table in the evening">
+        <span class="gram__hover" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.6 12c-2.1 4.4-9.6 9-9.6 9z"/></svg><b>356</b></span>
       </a>
     </div>
 
     <p class="center mt-48" data-reveal>
-      <a class="btn btn--line" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-        Follow Us @aureliabay
+      <a class="btn btn--line" href="https://www.facebook.com/nikopsroyalhotel/" target="_blank" rel="noopener noreferrer">
+        Follow Us on Facebook
       </a>
     </p>
   </div>
 </section>
 
 <!-- ============================================================
-     7 · EXPLORE THE DESTINATION — full-bleed overlay cards
+     7 · EXPLORE THE AREA — full-bleed overlay cards
+     Real, checkable distances from the property.
      ============================================================ -->
 <section class="section section--sand">
   <div class="wrap">
     <div class="section__head section__head--center" data-reveal>
-      <span class="eyebrow eyebrow--center">Explore the Destination</span>
-      <h2>Step outside the gate.</h2>
-      <p class="lede">The concierge keeps a short list — the places worth the drive, and the ones
-        best reached on foot before breakfast.</p>
+      <span class="eyebrow eyebrow--center">Explore the Area</span>
+      <h2>Close to the coast,<br>close to the city.</h2>
+      <p class="lede">Kokrobite's beaches are down the road, and central Accra is a
+        straightforward run up the N1.</p>
     </div>
 
     <div class="destinations">
       <article class="dest" data-reveal>
         <img loading="lazy" decoding="async" width="900" height="1200"
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+          src="./images/beach.png"
           sizes="(max-width:860px) 100vw, 32vw"
-          alt="Crescent of pale sand framed by cliffs and clear shallow water">
+          alt="A wide sandy beach with palm trees and breaking surf on the Ghanaian coast">
         <span class="dest__scrim" aria-hidden="true"></span>
         <div class="dest__body">
           <span class="eyebrow eyebrow--light">01 — Coast</span>
-          <h3 class="mt-8">Beaches</h3>
-          <p>Nine coves within a twenty-minute drive, three of them reachable only by boat.
-            We will pack the cooler.</p>
-          <a class="link dest__link" href="#" style="color:#fff">Plan a beach day <span aria-hidden="true">→</span></a>
+          <h3 class="mt-8">Kokrobite Beach</h3>
+          <p>Straight down the Tuba-Kokrobite Road. Drumming, seafood, and one of the
+            best-known stretches of sand near Accra.</p>
+          <a class="link dest__link" href="contact.html" style="color:#fff">Ask for directions <span aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="dest" data-reveal data-reveal-delay="1">
         <img loading="lazy" decoding="async" width="900" height="1200"
-          src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80"
+          src="./images/the-central-mosque-one.jpg"
           sizes="(max-width:860px) 100vw, 32vw"
-          alt="Warm evening lights along a lively waterfront promenade lined with bars">
+          alt="A busy city street scene with market stalls and traffic in Accra">
         <span class="dest__scrim" aria-hidden="true"></span>
         <div class="dest__body">
-          <span class="eyebrow eyebrow--light">02 — After Dark</span>
-          <h3 class="mt-8">Nightlife</h3>
-          <p>Harbour bars, a jazz cellar under the old customs house, and a car waiting
-            whenever you are ready.</p>
-          <a class="link dest__link" href="#" style="color:#fff">See the list <span aria-hidden="true">→</span></a>
+          <span class="eyebrow eyebrow--light">02 — City</span>
+          <h3 class="mt-8">Central Accra</h3>
+          <p>Around 20 km to the Accra Central Mosque and 25 km to Independence Arch —
+            close enough for business, far enough to sleep.</p>
+          <a class="link dest__link" href="contact.html" style="color:#fff">Plan the journey <span aria-hidden="true">→</span></a>
         </div>
       </article>
 
       <article class="dest" data-reveal data-reveal-delay="2">
         <img loading="lazy" decoding="async" width="900" height="1200"
-          src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=900&q=80"
-          onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80'"
+          src="./images/nkrumah-park.jpg"
           sizes="(max-width:860px) 100vw, 32vw"
-          alt="Historic hilltop town of whitewashed houses glowing in late afternoon light">
+          alt="A monument standing against a bright sky in a landscaped memorial park">
         <span class="dest__scrim" aria-hidden="true"></span>
         <div class="dest__body">
           <span class="eyebrow eyebrow--light">03 — Heritage</span>
-          <h3 class="mt-8">Cultural Sites</h3>
-          <p>A twelfth-century citadel, a Saturday market that has not changed in two hundred
-            years, and the best pastel in the region.</p>
-          <a class="link dest__link" href="#" style="color:#fff">Explore inland <span aria-hidden="true">→</span></a>
+          <h3 class="mt-8">Memorial Park</h3>
+          <p>Kwame Nkrumah Memorial Park sits about 25 km away, alongside the museums
+            and markets of the old city centre.</p>
+          <a class="link dest__link" href="contact.html" style="color:#fff">Ask the front desk <span aria-hidden="true">→</span></a>
         </div>
       </article>
     </div>
@@ -606,50 +621,51 @@
 </section>
 
 <!-- ============================================================
-     8 · SPA & WELLNESS — dual-image reveal
+     8 · THE POOL — dual-image reveal
      ============================================================ -->
-<section class="section section--navy" id="spa">
+<section class="section section--navy" id="pool">
   <div class="wrap">
     <div class="section__head section__head--center" data-reveal>
-      <span class="eyebrow eyebrow--center eyebrow--light">The Spa &amp; Wellness</span>
-      <h2>Silence, with a view.</h2>
+      <span class="eyebrow eyebrow--center eyebrow--light">The Swimming Pool</span>
+      <h2>The reason people come back.</h2>
     </div>
 
     <div class="duo">
       <figure class="duo__figure" data-reveal>
         <img loading="lazy" decoding="async" width="1000" height="1250"
-          src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1000&q=80"
-          srcset="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=700&q=70 700w,
-                  https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1300&q=80 1300w"
+          src="./images/pool2.jpg"
+          srcset="./images/pool2.jpg"
           sizes="(max-width:820px) 100vw, 48vw"
-          alt="Softly lit spa treatment room with a massage bed, linen drapes and stone walls">
-        <figcaption><b>The Treatment Rooms</b><span>Six suites cut into the rock face</span></figcaption>
+          alt="The outdoor swimming pool with still, clear water under an open sky">
+        <figcaption><b>The Pool</b><span>Outdoor, open to all guests</span></figcaption>
       </figure>
 
       <figure class="duo__figure" data-reveal data-reveal-delay="1">
         <img loading="lazy" decoding="async" width="1000" height="1250"
-          src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1000&q=80"
-          srcset="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=700&q=70 700w,
-                  https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=1300&q=80 1300w"
+          src="./images/terrace1.jpg"
+          srcset="./images/terrace1.jpg"
           sizes="(max-width:820px) 100vw, 48vw"
-          alt="Adults-only infinity pool with still water running to the edge above the sea">
-        <figcaption><b>The Quiet Pool</b><span>Adults only, 07:00 until dark</span></figcaption>
+          alt="Sun loungers and parasols arranged along the poolside terrace">
+        <figcaption><b>The Terrace</b><span>Loungers, shade, and bar service</span></figcaption>
       </figure>
     </div>
 
     <p class="center mt-48" data-reveal>
-      <a class="btn btn--gold btn--lg" href="booking.html">Book a Treatment</a>
+      <a class="btn btn--gold btn--lg" href="booking.html">Book a Room</a>
     </p>
   </div>
 </section>
 
 <!-- ============================================================
-     9 · WHY GUESTS RETURN — testimonials over a blurred image
+     9 · WHY GUESTS RETURN — testimonials
+     NOTE: quotes are ILLUSTRATIVE placeholders. Replace with real,
+     attributable reviews (with permission) before launch — the 4.6/5
+     aggregate is the only verified review figure on this page.
      ============================================================ -->
 <section class="testimonials" data-testimonials aria-label="Guest testimonials">
   <div class="testimonials__media" aria-hidden="true">
     <img loading="lazy" decoding="async" width="1600" height="1000"
-      src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1600&q=70"
+      src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=70"
       alt="">
   </div>
   <div class="testimonials__overlay" aria-hidden="true"></div>
@@ -657,14 +673,14 @@
   <div class="wrap">
     <div class="section__head section__head--center" data-reveal>
       <span class="eyebrow eyebrow--center eyebrow--light">Why Guests Return</span>
-      <h2>Sixty-one per cent come back.</h2>
+      <h2>Rated 4.6 out of 5.</h2>
     </div>
 
     <div class="tstack" data-reveal>
       <article class="tcard is-active">
         <img class="tcard__avatar" loading="lazy" decoding="async" width="82" height="82"
           src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80"
-          alt="Portrait of Amara Whitfield">
+          alt="Portrait of a guest who reviewed the hotel">
         <span class="stars" aria-label="Rated 5 out of 5">
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
@@ -672,16 +688,16 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
         </span>
-        <blockquote class="tcard__quote">“We came for four nights and rebooked before we had unpacked.
-          The staff remember how you take your coffee by the second morning.”</blockquote>
-        <p class="tcard__name">Amara Whitfield</p>
-        <p class="tcard__from">Cliff Suite · Fourth stay · London</p>
+        <blockquote class="tcard__quote">“Clean room, working shower, and the pool was exactly
+          what we needed after the drive from Kasoa. Staff were quick with everything.”</blockquote>
+        <p class="tcard__name">Akosua M.</p>
+        <p class="tcard__from">Standard Double · Stayed with family</p>
       </article>
 
       <article class="tcard">
         <img class="tcard__avatar" loading="lazy" decoding="async" width="82" height="82"
           src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80"
-          alt="Portrait of Daniel Okonkwo">
+          alt="Portrait of a guest who reviewed the hotel">
         <span class="stars" aria-label="Rated 5 out of 5">
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
@@ -689,16 +705,16 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
         </span>
-        <blockquote class="tcard__quote">“Solane alone would justify the trip. But it was the
-          quiet pool at seven in the morning that I still think about in meetings.”</blockquote>
-        <p class="tcard__name">Daniel Okonkwo</p>
-        <p class="tcard__from">Garden Villa · Second stay · Lagos</p>
+        <blockquote class="tcard__quote">“I come down for work every few months and this is now
+          the only place I book. The full breakfast sets you up for the whole day.”</blockquote>
+        <p class="tcard__name">Daniel O.</p>
+        <p class="tcard__from">Executive Room · Business traveller</p>
       </article>
 
       <article class="tcard">
         <img class="tcard__avatar" loading="lazy" decoding="async" width="82" height="82"
           src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=160&q=80"
-          alt="Portrait of Sofia Marchetti">
+          alt="Portrait of a guest who reviewed the hotel">
         <span class="stars" aria-label="Rated 5 out of 5">
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
@@ -706,28 +722,27 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
         </span>
-        <blockquote class="tcard__quote">“Our children were treated like guests, not a problem to
-          be managed. That is rarer than an ocean view.”</blockquote>
-        <p class="tcard__name">Sofia Marchetti</p>
-        <p class="tcard__from">Headland Residence · Third stay · Milan</p>
+        <blockquote class="tcard__quote">“Easy to find just off Tuba Junction, and much quieter
+          than staying in town. The children spent the whole weekend in the pool.”</blockquote>
+        <p class="tcard__name">Sofia A.</p>
+        <p class="tcard__from">Family Room · Weekend stay</p>
       </article>
 
       <article class="tcard">
         <img class="tcard__avatar" loading="lazy" decoding="async" width="82" height="82"
-          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&q=80"
-          onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80'"
-          alt="Portrait of James Halloran">
-        <span class="stars" aria-label="Rated 5 out of 5">
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=160&q=80"
+          alt="Portrait of a guest who reviewed the hotel">
+        <span class="stars" aria-label="Rated 4 out of 5">
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
           <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
         </span>
-        <blockquote class="tcard__quote">“I have stayed in a lot of five-star hotels. This is the
-          only one where nobody ever seemed to be performing.”</blockquote>
-        <p class="tcard__name">James Halloran</p>
-        <p class="tcard__from">Penthouse · Sixth stay · New York</p>
+        <blockquote class="tcard__quote">“Good value, spotless bathroom, and the bar stays open
+          late enough. Kokrobite beach is a short drive if you want the sea.”</blockquote>
+        <p class="tcard__name">Kwame B.</p>
+        <p class="tcard__from">Poolside Room · Second stay</p>
       </article>
 
       <div class="tdots" role="tablist" aria-label="Choose testimonial">
@@ -740,41 +755,40 @@
   </div>
 </section>
 
-<!-- Stats — quiet numeric reassurance before the final ask -->
+<!-- Key facts band — all verified -->
 <section class="section section--cream">
   <div class="wrap stats" data-reveal>
-    <div class="stat"><b data-count="42">42</b><span>Ocean-facing suites</span></div>
-    <div class="stat"><b data-count="600" data-suffix="m">600m</b><span>Private shoreline</span></div>
-    <div class="stat"><b data-count="61" data-suffix="%">61%</b><span>Guests who return</span></div>
-    <div class="stat"><b data-count="24" data-suffix="/7">24/7</b><span>Personal concierge</span></div>
+    <div class="stat"><b data-count="4.6">4.6</b><span>Guest rating / 5</span></div>
+    <div class="stat"><b>12<span aria-hidden="true">:</span>00</b><span>Check-in &amp; check-out</span></div>
+    <div class="stat"><b data-count="20" data-suffix=" km">20 km</b><span>To Accra Central Mosque</span></div>
+    <div class="stat"><b data-count="3">3</b><span>Breakfast options</span></div>
   </div>
 </section>
 
 <!-- ============================================================
-     10 · FINAL CTA — cinematic full-screen
+     10 · FINAL CTA
      ============================================================ -->
 <section class="finale" id="booking">
   <div class="finale__media" aria-hidden="true">
     <img loading="lazy" decoding="async" width="2000" height="1250"
-      src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=2000&q=80"
-      onerror="this.src='https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=80'"
+      src="./images/room2.jpg"
       alt="">
   </div>
   <div class="finale__overlay" aria-hidden="true"></div>
 
   <div class="wrap">
-    <span class="eyebrow eyebrow--center eyebrow--light" data-reveal>Limited 2026 availability</span>
-    <h2 data-reveal data-reveal-delay="1">Your Escape <em>Awaits</em></h2>
+    <span class="eyebrow eyebrow--center eyebrow--light" data-reveal>Rooms available now</span>
+    <h2 data-reveal data-reveal-delay="1">Your Room <em>Awaits</em></h2>
     <p data-reveal data-reveal-delay="2">
-      Book direct and we will hold your rate, upgrade you where we can, and leave something
-      cold on the terrace before you arrive.
+      Book direct with the front desk. Call or send a message and we will confirm your
+      room the same day — breakfast included, every room en-suite.
     </p>
     <div class="finale__actions" data-reveal data-reveal-delay="3">
       <a class="btn btn--gold btn--lg btn--pulse" href="booking.html">Book Your Stay Now</a>
-      <a class="btn btn--ghost btn--lg" href="contact.html">Speak to a Concierge</a>
+      <a class="btn btn--ghost btn--lg" href="tel:+233598338215">Call +233 59 833 8215</a>
     </div>
     <p class="finale__note" data-reveal data-reveal-delay="4">
-      Best rate guaranteed · Free cancellation up to 48 hours · No booking fees
+      Check-in from 12:00 PM · Check-out by 12:00 PM · Non-smoking throughout
     </p>
   </div>
 </section>
@@ -787,19 +801,19 @@
 <footer class="footer">
   <div class="wrap footer__top">
     <div class="footer__brand">
-      <span class="footer__brand-name">Aurelia Bay</span>
-      <span class="footer__brand-sub">Resort &amp; Spa</span>
-      <p>A forty-two suite retreat on a private bay, where the only thing scheduled
-        is sunset.</p>
+      <span class="footer__brand-name">Nikops Royal</span>
+      <span class="footer__brand-sub">Hotel · Greater Accra</span>
+      <p>A comfortable, well-kept hotel on the Tuba-Kokrobite Road, with an outdoor
+        pool, restaurant and bar.</p>
       <div class="footer__social">
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Bay on Instagram">
-          <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.42.4.68.8.9 1.4.17.4.36 1 .42 2.2.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.4.42-.8.68-1.4.9-.4.17-1 .36-2.2.42-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.42-.4-.68-.8-.9-1.4-.17-.4-.36-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.4-.42.8-.68 1.4-.9.4-.17 1-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 3.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2Zm0 10.9a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6Zm6.9-11.2a1.55 1.55 0 1 1-3.1 0 1.55 1.55 0 0 1 3.1 0Z"/></svg>
-        </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Bay on Facebook">
+        <a href="https://www.facebook.com/nikopsroyalhotel/" target="_blank" rel="noopener noreferrer" aria-label="Nikops Royal Hotel on Facebook">
           <svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.1v2.3H7.6V14h2.7v8z"/></svg>
         </a>
-        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Aurelia Bay on Pinterest">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.09-.8-.17-2.05.03-2.93l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.45 1.8-2.45.86 0 1.27.64 1.27 1.4 0 .86-.54 2.14-.83 3.33-.24 1 .5 1.8 1.48 1.8 1.78 0 3.14-1.87 3.14-4.57 0-2.39-1.72-4.06-4.17-4.06-2.84 0-4.5 2.13-4.5 4.33 0 .86.33 1.78.74 2.28a.3.3 0 0 1 .07.28l-.28 1.14c-.05.18-.15.22-.34.13-1.25-.58-2.03-2.4-2.03-3.87 0-3.15 2.29-6.04 6.6-6.04 3.47 0 6.16 2.47 6.16 5.77 0 3.44-2.17 6.22-5.19 6.22-1.01 0-1.96-.53-2.29-1.15l-.62 2.38c-.23.86-.84 1.94-1.25 2.6A10 10 0 1 0 12 2Z"/></svg>
+        <a href="https://wa.me/233598338215" target="_blank" rel="noopener noreferrer" aria-label="Message Nikops Royal Hotel on WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M20 11.5A8.5 8.5 0 0 1 7.4 18.7L4 20l1.4-3.3A8.5 8.5 0 1 1 20 11.5Zm-8.4 6.4c1.4 0 2.7-.4 3.8-1.1l.3-.2 2.2.6-.6-2.1.2-.3a6.6 6.6 0 1 0-2.2 2.2l.3.2c-1.1.7-2.4 1.1-3.8 1.1Z"/></svg>
+        </a>
+        <a href="mailto:nikopsroyalhotel@gmail.com" aria-label="Email Nikops Royal Hotel">
+          <svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm0 0 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
         </a>
       </div>
     </div>
@@ -807,53 +821,52 @@
     <div class="footer__col">
       <h4>Stay</h4>
       <ul>
-        <li><a href="rooms.html">Rooms &amp; Suites</a></li>
-        <li><a href="room-detail.html">The Penthouse</a></li>
-        <li><a href="booking.html">Book a Stay</a></li>
-        <li><a href="#spa">Spa &amp; Wellness</a></li>
+        <li><a href="rooms.html">Our Rooms</a></li>
+        <li><a href="room-detail.html">Executive Room</a></li>
+        <li><a href="booking.html">Book a Room</a></li>
+        <li><a href="#pool">Swimming Pool</a></li>
       </ul>
     </div>
 
     <div class="footer__col">
-      <h4>Resort</h4>
+      <h4>Hotel</h4>
       <ul>
-        <li><a href="about.html">Our Story</a></li>
-        <li><a href="#dining">Dining</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#dining">Restaurant &amp; Bar</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="contact.html#directions">Getting Here</a></li>
       </ul>
     </div>
 
-    <div class="footer__col footer__news">
-      <h4>The Dispatch</h4>
-      <p>Seasonal offers, new menus, and the occasional photograph of the bay at six in the morning.</p>
-      <form class="footer__form" data-newsletter>
-        <label class="sr-only" for="news-email">Email address</label>
-        <input type="email" id="news-email" name="email" placeholder="your@email.com" required>
-        <button type="submit">Join</button>
-      </form>
-      <p class="footer__msg" role="status" aria-live="polite"></p>
+    <div class="footer__col">
+      <h4>Find Us</h4>
+      <ul>
+        <li>Tuba-Kokrobite Road</li>
+        <li>Near Tuba Junction, off Kasoa Road</li>
+        <li>Ngleshi Amanfro, Greater Accra</li>
+        <li>GPS: <strong style="color:var(--gold-2)">GS-0356-3338</strong></li>
+        <li><a href="tel:+233598338215">+233 59 833 8215</a></li>
+        <li><a href="mailto:nikopsroyalhotel@gmail.com">nikopsroyalhotel@gmail.com</a></li>
+      </ul>
     </div>
   </div>
 
   <div class="wrap footer__bottom">
-    <span>© <span data-year>2026</span> Aurelia Bay Resort &amp; Spa</span>
+    <span>© <span data-year>2026</span> Nikops Royal Hotel · Ngleshi Amanfro, Ghana</span>
     <nav aria-label="Legal">
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
-      <a href="#">Accessibility</a>
-      <a href="#">Press</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </footer>
 
-<a class="concierge" href="https://wa.me/10000000000" target="_blank" rel="noopener noreferrer">
+<a class="concierge" href="https://wa.me/233598338215" target="_blank" rel="noopener noreferrer">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5A8.5 8.5 0 0 1 7.4 18.7L4 20l1.4-3.3A8.5 8.5 0 1 1 20 11.5Zm-8.4 6.4c1.4 0 2.7-.4 3.8-1.1l.3-.2 2.2.6-.6-2.1.2-.3a6.6 6.6 0 1 0-2.2 2.2l.3.2c-1.1.7-2.4 1.1-3.8 1.1Z"/></svg>
-  <span>Concierge</span>
+  <span>WhatsApp</span>
 </a>
 
-<!-- PERF: single deferred bundle; a real build would code-split the
-     carousel/lightbox and ship them as ES modules with <script type="module">. -->
+<script src="js/hotel-data.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
