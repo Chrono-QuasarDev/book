@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Complete Your Booking — Aurelia Bay</title>
-<meta name="description" content="Secure your stay at Aurelia Bay. Free cancellation to 48 hours, best rate guaranteed, no booking fees.">
+<title>Book Your Room — Nikops Royal Hotel, Accra</title>
+<meta name="description" content="Reserve a room at Nikops Royal Hotel, Tuba Junction, Accra. Breakfast included, pool access, en-suite bathroom. Call +233 59 833 8215.">
 <meta name="theme-color" content="#0d1b2a">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
@@ -15,17 +15,17 @@
 
 <header class="header is-scrolled">
   <div class="header__inner">
-    <a class="header__brand" href="index.html" aria-label="Aurelia Bay — home">
-      <span class="header__brand-name">Aurelia Bay</span>
-      <span class="header__brand-sub">Resort &amp; Spa</span>
+    <a class="header__brand" href="index.html" aria-label="Nikops Royal Hotel — home">
+      <span class="header__brand-name">Nikops Royal</span>
+      <span class="header__brand-sub">Hotel · Accra</span>
     </a>
     <button class="header__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="header__nav" id="primary-nav" aria-label="Primary">
       <a class="header__link" href="index.html">Home</a>
-      <a class="header__link" href="rooms.html">Rooms &amp; Suites</a>
+      <a class="header__link" href="rooms.html">Rooms</a>
       <a class="header__link" href="about.html">About</a>
       <a class="header__link" href="contact.html">Contact</a>
-      <a class="header__cta" href="tel:+10000000000">Call Reservations</a>
+      <a class="header__cta" href="tel:+233598338215">Call +233 59 833 8215</a>
     </nav>
   </div>
 </header>
@@ -33,7 +33,7 @@
 <main id="main" class="section" style="padding-top:140px">
   <div class="wrap">
 
-    <!-- Progress stepper — reduces abandonment by showing how short this is -->
+    <!-- Progress stepper -->
     <nav class="stepper" aria-label="Booking progress">
       <div class="stepper__step is-done">
         <span class="stepper__dot" aria-hidden="true">✓</span>
@@ -47,12 +47,12 @@
       <span class="stepper__bar" aria-hidden="true"></span>
       <div class="stepper__step">
         <span class="stepper__dot" aria-hidden="true">3</span>
-        <span class="stepper__label">Payment</span>
+        <span class="stepper__label">Confirm</span>
       </div>
       <span class="stepper__bar" aria-hidden="true"></span>
       <div class="stepper__step">
         <span class="stepper__dot" aria-hidden="true">4</span>
-        <span class="stepper__label">Confirmed</span>
+        <span class="stepper__label">Reserved</span>
       </div>
     </nav>
 
@@ -61,9 +61,9 @@
       <!-- ---------- Guest details ---------- -->
       <div>
         <span class="eyebrow">Step 2 of 4</span>
-        <h1 class="mt-16" style="font-size:clamp(1.9rem,1.4rem + 2.2vw,2.9rem)">Who is travelling?</h1>
-        <p class="lede mt-16">Two minutes. We will email a confirmation immediately and your
-          host will be in touch the week before you arrive.</p>
+        <h1 class="mt-16" style="font-size:clamp(1.9rem,1.4rem + 2.2vw,2.9rem)">Who is staying?</h1>
+        <p class="lede mt-16">Send us your details and the front desk will confirm your room
+          directly — by phone, WhatsApp or email, whichever you prefer.</p>
 
         <form class="form mt-32" data-validate>
           <div class="form__row form__row--2">
@@ -82,12 +82,12 @@
           <div class="form__row form__row--2">
             <div class="field">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" autocomplete="email" required data-error="We need a valid email for your confirmation.">
+              <input type="email" id="email" name="email" autocomplete="email" required data-error="We need a valid email to confirm your booking.">
               <p class="field__error" role="alert"></p>
             </div>
             <div class="field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" required data-error="Please enter a contact number.">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+233 …" required data-error="Please enter a contact number.">
               <p class="field__error" role="alert"></p>
             </div>
           </div>
@@ -96,16 +96,29 @@
             <div class="field">
               <label for="checkin">Check in</label>
               <input type="date" id="checkin" name="checkin" required data-error="Choose an arrival date.">
+              <p class="field__hint">From 12:00 PM</p>
               <p class="field__error" role="alert"></p>
             </div>
             <div class="field">
               <label for="checkout">Check out</label>
               <input type="date" id="checkout" name="checkout" required data-error="Choose a departure date.">
+              <p class="field__hint">By 12:00 PM</p>
               <p class="field__error" role="alert"></p>
             </div>
           </div>
 
           <div class="form__row form__row--2">
+            <div class="field">
+              <label for="roomtype">Room</label>
+              <select id="roomtype" name="roomtype">
+                <option value="executive" selected>Executive Room — GH₵ 650</option>
+                <option value="family">Family Room — GH₵ 750</option>
+                <option value="poolside">Poolside Room — GH₵ 520</option>
+                <option value="twin">Standard Twin — GH₵ 420</option>
+                <option value="standard">Standard Double — GH₵ 380</option>
+                <option value="single">Standard Single — GH₵ 300</option>
+              </select>
+            </div>
             <div class="field">
               <label for="guests">Guests</label>
               <select id="guests" name="guests">
@@ -113,76 +126,86 @@
                 <option>3 guests</option><option>4 guests</option>
               </select>
             </div>
-            <div class="field">
-              <label for="arrival">Estimated arrival</label>
-              <select id="arrival" name="arrival">
-                <option>Before 15:00</option><option selected>15:00 – 18:00</option>
-                <option>18:00 – 22:00</option><option>After 22:00</option>
-              </select>
-            </div>
+          </div>
+
+          <div class="field">
+            <label for="breakfast">Breakfast preference</label>
+            <select id="breakfast" name="breakfast">
+              <option selected>À la carte</option>
+              <option>Continental</option>
+              <option>Full English / Irish</option>
+            </select>
+            <p class="field__hint">Breakfast is included with every room. You can change this on arrival.</p>
           </div>
 
           <div class="field">
             <label for="requests">Anything we should know?</label>
-            <textarea id="requests" name="requests" placeholder="Allergies, an anniversary, a late flight — anything at all."></textarea>
-            <p class="field__hint">Requests are noted but not guaranteed until confirmed by your host.</p>
+            <textarea id="requests" name="requests" placeholder="Arrival time, dietary needs, a late flight — anything at all."></textarea>
+            <p class="field__hint">Please note: the hotel is non-smoking throughout and pets are not allowed.</p>
           </div>
 
-          <button class="btn btn--gold btn--lg mt-16" type="submit">Continue to Payment</button>
-          <p class="field__hint center">You will not be charged until the next step.</p>
+          <button class="btn btn--gold btn--lg mt-16" type="submit">Send Booking Request</button>
+          <p class="field__hint center">No payment is taken online. The front desk confirms your room directly.</p>
         </form>
 
         <div class="form__ok" data-form-ok>
-          <h2 style="font-size:1.6rem">Thank you, <span data-echo-name>traveller</span>.</h2>
-          <p class="lede mt-16">Your details are held. In a live build this step would hand off
-            to a PCI-compliant payment provider (Stripe / Adyen) and then to step four.</p>
-          <a class="btn btn--navy mt-24" href="index.html">Back to the resort</a>
+          <h2 style="font-size:1.6rem">Thank you, <span data-echo-name>guest</span>.</h2>
+          <p class="lede mt-16">Your request has been recorded. The front desk will confirm your
+            room shortly. If it is urgent, call or message us directly.</p>
+          <p class="lede mt-16">
+            <a href="tel:+233598338215" style="color:var(--gold)">+233 59 833 8215</a> ·
+            <a href="mailto:nikopsroyalhotel@gmail.com" style="color:var(--gold)">nikopsroyalhotel@gmail.com</a>
+          </p>
+          <!-- A real build POSTs this to the property's booking inbox / PMS. -->
+          <a class="btn btn--navy mt-24" href="index.html">Back to the hotel</a>
         </div>
       </div>
 
       <!-- ---------- Reassurance sidebar ---------- -->
       <aside class="summary" aria-label="Booking summary">
         <div class="summary__media">
-          <!-- Showing the room they chose keeps the purchase emotional, not transactional -->
           <img loading="lazy" decoding="async" width="800" height="500"
             src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
-            alt="The Aurelia Penthouse living room with its wraparound clifftop terrace">
+            alt="The Executive Room with its seating area and large bed">
         </div>
         <div class="summary__body">
           <span class="eyebrow">Your selection</span>
-          <h2 class="mt-16" style="font-size:1.5rem">The Aurelia Penthouse</h2>
-          <p class="field__hint mt-8">180 m² · Ocean front · Sleeps 4</p>
+          <h2 class="mt-16" style="font-size:1.5rem">Executive Room</h2>
+          <p class="field__hint mt-8">En-suite · Breakfast included · Pool access</p>
 
           <div class="bookcard__rows mt-24">
-            <div class="bookcard__row"><span>Nights</span><strong>3</strong></div>
-            <div class="bookcard__row"><span>$1,850 × 3</span><strong>$5,550</strong></div>
-            <div class="bookcard__row"><span>Resort service</span><strong>$180</strong></div>
-            <div class="bookcard__row"><span>Direct-booking credit</span><strong>−$250</strong></div>
+            <div class="bookcard__row"><span>Nights</span><strong>2</strong></div>
+            <div class="bookcard__row"><span>GH₵ 650 × 2</span><strong>GH₵ 1,300</strong></div>
+            <div class="bookcard__row"><span>Breakfast</span><strong>Included</strong></div>
+            <div class="bookcard__row"><span>Pool access</span><strong>Included</strong></div>
           </div>
-          <div class="bookcard__total"><span>Total</span><b>$5,480</b></div>
+          <div class="bookcard__total"><span>Total</span><b>GH₵ 1,300</b></div>
 
-          <!-- Trust badges — placed adjacent to the total, where doubt peaks -->
+          <!-- Trust badges — verified property facts, placed beside the total -->
           <div class="trust">
             <div class="trust__item">
-              <svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 8.1-7 9-4-0.9-7-4.6-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4" stroke-linecap="round"/></svg>
-              <b>Secure payment</b><span>256-bit encryption</span>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
+              <b>4.6 / 5</b><span>Guest rating</span>
             </div>
             <div class="trust__item">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
-              <b>Free cancellation</b><span>Up to 48h before</span>
+              <b>12:00 / 12:00</b><span>Check-in &amp; out</span>
+            </div>
+            <div class="trust__item">
+              <svg viewBox="0 0 24 24"><path d="M4 18h16M6 18V9a6 6 0 0 1 12 0v9" stroke-linecap="round"/></svg>
+              <b>Breakfast</b><span>Always included</span>
             </div>
             <div class="trust__item">
               <svg viewBox="0 0 24 24"><path d="M4 7h16v11H4zM4 11h16" stroke-linecap="round"/></svg>
-              <b>No booking fees</b><span>Ever, when direct</span>
-            </div>
-            <div class="trust__item">
-              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
-              <b>Best rate</b><span>Or we match it</span>
+              <b>No online payment</b><span>Pay at the hotel</span>
             </div>
           </div>
 
-          <p class="bookcard__note">Questions? Reservations answer in under a minute on
-            <a href="tel:+10000000000" style="color:var(--gold)">+1 000 000 0000</a>.</p>
+          <p class="bookcard__note">
+            Questions? Call <a href="tel:+233598338215" style="color:var(--gold)">+233 59 833 8215</a><br>
+            Tuba-Kokrobite Road, near Tuba Junction<br>
+            GPS: <strong>GS-0356-3338</strong>
+          </p>
         </div>
       </aside>
 
@@ -191,12 +214,16 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap footer__bottom" style="border-top:0;margin-top:0">
-    <span>© <span data-year>2026</span> Aurelia Bay Resort &amp; Spa</span>
-    <nav aria-label="Legal"><a href="#">Privacy</a><a href="#">Terms</a></nav>
+  <div class="wrap footer__bottom" style="border-top:0;margin-top:0;align-items:flex-start">
+    <span>© <span data-year>2026</span> Nikops Royal Hotel · Ngleshi Amanfro, Ghana<br>
+      Tuba-Kokrobite Road, near Tuba Junction, off Kasoa Road · GPS GS-0356-3338<br>
+      <a href="tel:+233598338215">+233 59 833 8215</a> ·
+      <a href="mailto:nikopsroyalhotel@gmail.com">nikopsroyalhotel@gmail.com</a></span>
+    <nav aria-label="Legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="contact.html">Contact</a></nav>
   </div>
 </footer>
 
+<script src="js/hotel-data.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>

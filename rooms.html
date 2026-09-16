@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rooms &amp; Suites — Aurelia Bay</title>
-<meta name="description" content="Forty-two ocean-facing rooms, suites and villas. Every one of them looks at water.">
+<title>Our Rooms — Nikops Royal Hotel, Accra</title>
+<meta name="description" content="En-suite rooms at Nikops Royal Hotel, Tuba Junction, Accra. Private bathroom and shower in every room, breakfast included, pool access for all guests.">
 <meta name="theme-color" content="#0d1b2a">
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
@@ -14,16 +14,16 @@
 
 <header class="header">
   <div class="header__inner">
-    <a class="header__brand" href="index.html" aria-label="Aurelia Bay — home">
-      <span class="header__brand-name">Aurelia Bay</span>
-      <span class="header__brand-sub">Resort &amp; Spa</span>
+    <a class="header__brand" href="index.html" aria-label="Nikops Royal Hotel — home">
+      <span class="header__brand-name">Nikops Royal</span>
+      <span class="header__brand-sub">Hotel · Accra</span>
     </a>
     <button class="header__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="header__nav" id="primary-nav" aria-label="Primary">
       <a class="header__link" href="index.html">Home</a>
-      <a class="header__link" href="rooms.html" aria-current="page">Rooms &amp; Suites</a>
-      <a class="header__link" href="index.html#dining">Dining</a>
-      <a class="header__link" href="index.html#spa">Spa</a>
+      <a class="header__link" href="rooms.html" aria-current="page">Rooms</a>
+      <a class="header__link" href="index.html#dining">Restaurant &amp; Bar</a>
+      <a class="header__link" href="index.html#pool">Pool</a>
       <a class="header__link" href="about.html">About</a>
       <a class="header__link" href="contact.html">Contact</a>
       <a class="header__cta" href="booking.html">Book Now</a>
@@ -35,30 +35,53 @@
 
 <section class="pagehero">
   <div class="pagehero__media">
-    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1920&q=80"
+    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1920&q=80"
          sizes="100vw" fetchpriority="high"
-         alt="Suite interior with an unmade linen bed facing floor-to-ceiling windows and the ocean">
+         alt="A guest room made up with clean white bedding beside a bright window">
   </div>
   <div class="pagehero__overlay" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow eyebrow--light">Accommodation</span>
-    <h1>Forty-two rooms.<br>Forty-two sea views.</h1>
-    <p>No courtyard rooms, no compromise category. If it has a window, it faces water.</p>
+    <h1>Every room en-suite.<br>Every room yours.</h1>
+    <p>Private bathroom and standalone shower throughout, breakfast included with every
+      booking, and pool access for all guests.</p>
+  </div>
+</section>
+
+<!-- What every room includes — verified amenity set -->
+<section class="section section--white" style="padding-block:clamp(48px,6vw,80px)">
+  <div class="wrap">
+    <div class="section__head section__head--center" data-reveal>
+      <span class="eyebrow eyebrow--center">Included in every room</span>
+      <h2 style="font-size:clamp(1.6rem,1.2rem + 1.6vw,2.2rem)">The same standard, whichever you choose.</h2>
+    </div>
+    <div class="amenities" data-reveal>
+      <div class="amenity"><svg viewBox="0 0 24 24"><path d="M4 12h16v7H4zM6 12V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4" stroke-linecap="round"/></svg><div><b>Private bathroom</b><span>En-suite, every room</span></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24"><path d="M12 3v7M8 10h8l-1 10H9L8 10Z" stroke-linecap="round"/></svg><div><b>Standalone shower</b><span>Hot water throughout</span></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24"><path d="M2 17s2-1.5 4-1.5S10 17 12 17s2-1.5 4-1.5S22 17 22 17M2 12s2-1.5 4-1.5S10 12 12 12s2-1.5 4-1.5S22 12 22 12" stroke-linecap="round"/></svg><div><b>Pool access</b><span>Included for all guests</span></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24"><path d="M4 18h16M6 18V9a6 6 0 0 1 12 0v9M10 5V3M14 5V3" stroke-linecap="round"/></svg><div><b>Breakfast</b><span>À la carte, Continental or Full English</span></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 11a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 8ZM9 8V6a3 3 0 0 1 6 0v2" stroke-linecap="round"/></svg><div><b>Restaurant &amp; bar</b><span>On site, open daily</span></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg><div><b>12:00 check-in</b><span>Check-out also 12:00</span></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8" stroke-linecap="round"/></svg><div><b>Non-smoking</b><span>Throughout the property</span></div></div>
+      <div class="amenity"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5 5l14 14" stroke-linecap="round"/></svg><div><b>No pets</b><span>Assistance animals excepted</span></div></div>
+    </div>
   </div>
 </section>
 
 <section class="section section--sand">
   <div class="wrap">
+    <!-- NOTE: room names, rates and occupancy are PLACEHOLDERS pending the
+         property's real rate card. Replace before launch. -->
     <div class="bento">
       <article class="room bento__item--xl" data-reveal>
         <img loading="lazy" decoding="async" width="1400" height="900"
           src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80"
           sizes="(max-width:1000px) 100vw, 62vw"
-          alt="Panoramic penthouse living room with a wraparound terrace above the ocean">
+          alt="The executive room with a seating area beside the window and a large bed">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Signature</span></div>
-          <h2 class="room__name">The Aurelia Penthouse</h2>
-          <p class="room__price"><b>$1,850</b> / night · 180 m² · Sleeps 4</p>
+          <div class="room__meta"><span class="room__tag">Largest room</span></div>
+          <h2 class="room__name">Executive Room</h2>
+          <p class="room__price"><b>GH₵ 650</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -66,11 +89,11 @@
         <img loading="lazy" decoding="async" width="800" height="1200"
           src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"
           sizes="(max-width:1000px) 100vw, 32vw"
-          alt="Cliff suite bedroom with a freestanding tub beside a full-height window">
+          alt="A double room with a made bed, bedside table and window light">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Ocean Front</span></div>
-          <h2 class="room__name">Cliff Suite</h2>
-          <p class="room__price"><b>$980</b> / night · 74 m²</p>
+          <div class="room__meta"><span class="room__tag">Most booked</span></div>
+          <h2 class="room__name">Standard Double</h2>
+          <p class="room__price"><b>GH₵ 380</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -78,11 +101,11 @@
         <img loading="lazy" decoding="async" width="1000" height="700"
           src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1100&q=80"
           sizes="(max-width:1000px) 100vw, 46vw"
-          alt="Ocean deluxe room with pale linens, timber floors and a private balcony">
+          alt="A twin room with two single beds separated by a bedside table">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Most booked</span></div>
-          <h2 class="room__name">Ocean Deluxe</h2>
-          <p class="room__price"><b>$640</b> / night · 46 m²</p>
+          <div class="room__meta"><span class="room__tag">Two beds</span></div>
+          <h2 class="room__name">Standard Twin</h2>
+          <p class="room__price"><b>GH₵ 420</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -90,11 +113,11 @@
         <img loading="lazy" decoding="async" width="1000" height="700"
           src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1100&q=80"
           sizes="(max-width:1000px) 100vw, 46vw"
-          alt="Garden villa terrace shaded by olive trees with a private plunge pool">
+          alt="A ground-floor room opening onto the garden and pool terrace">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Private pool</span></div>
-          <h2 class="room__name">Garden Villa</h2>
-          <p class="room__price"><b>$1,240</b> / night · 120 m²</p>
+          <div class="room__meta"><span class="room__tag">Pool side</span></div>
+          <h2 class="room__name">Poolside Room</h2>
+          <p class="room__price"><b>GH₵ 520</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -102,11 +125,11 @@
         <img loading="lazy" decoding="async" width="800" height="1000"
           src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80"
           sizes="(max-width:1000px) 100vw, 32vw"
-          alt="Corner junior suite with a curved reading nook facing the bay">
+          alt="A compact single room with a desk beneath the window">
         <div class="room__body">
-          <div class="room__meta"><span class="room__tag">Couples</span></div>
-          <h2 class="room__name">Bay Junior Suite</h2>
-          <p class="room__price"><b>$720</b> / night · 52 m²</p>
+          <div class="room__meta"><span class="room__tag">Solo travellers</span></div>
+          <h2 class="room__name">Standard Single</h2>
+          <p class="room__price"><b>GH₵ 300</b> / night · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -114,11 +137,11 @@
         <img loading="lazy" decoding="async" width="1200" height="800"
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
           sizes="(max-width:1000px) 100vw, 46vw"
-          alt="Two-bedroom family residence with an open-plan lounge opening onto a sun terrace">
+          alt="A family room with a double bed and an additional single bed">
         <div class="room__body">
           <div class="room__meta"><span class="room__tag">Families</span></div>
-          <h2 class="room__name">Headland Residence</h2>
-          <p class="room__price"><b>$1,480</b> / night · 150 m² · Sleeps 6</p>
+          <h2 class="room__name">Family Room</h2>
+          <p class="room__price"><b>GH₵ 750</b> / night · Sleeps 4 · Breakfast included</p>
           <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
         </div>
       </article>
@@ -128,15 +151,16 @@
 
 <section class="finale" style="min-height:70svh">
   <div class="finale__media" aria-hidden="true">
-    <img loading="lazy" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=80" alt="">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2000&q=80" alt="">
   </div>
   <div class="finale__overlay" aria-hidden="true"></div>
   <div class="wrap">
-    <h2 data-reveal>Still deciding?</h2>
-    <p data-reveal data-reveal-delay="1">Our reservations team will match the room to the trip — tell them who is coming and why.</p>
+    <h2 data-reveal>Not sure which room?</h2>
+    <p data-reveal data-reveal-delay="1">Call the front desk and tell us who is travelling —
+      we will put you in the right room.</p>
     <div class="finale__actions" data-reveal data-reveal-delay="2">
       <a class="btn btn--gold btn--lg btn--pulse" href="booking.html">Check Availability</a>
-      <a class="btn btn--ghost btn--lg" href="contact.html">Speak to a Concierge</a>
+      <a class="btn btn--ghost btn--lg" href="tel:+233598338215">Call +233 59 833 8215</a>
     </div>
   </div>
 </section>
@@ -144,12 +168,21 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap footer__bottom" style="border-top:0;margin-top:0">
-    <span>© <span data-year>2026</span> Aurelia Bay Resort &amp; Spa</span>
+  <div class="wrap footer__bottom" style="border-top:0;margin-top:0;align-items:flex-start">
+    <span>© <span data-year>2026</span> Nikops Royal Hotel · Ngleshi Amanfro, Ghana<br>
+      Tuba-Kokrobite Road, near Tuba Junction, off Kasoa Road · GPS GS-0356-3338<br>
+      <a href="tel:+233598338215">+233 59 833 8215</a> ·
+      <a href="mailto:nikopsroyalhotel@gmail.com">nikopsroyalhotel@gmail.com</a></span>
     <nav aria-label="Legal"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
   </div>
 </footer>
 
+<a class="concierge" href="https://wa.me/233598338215" target="_blank" rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5A8.5 8.5 0 0 1 7.4 18.7L4 20l1.4-3.3A8.5 8.5 0 1 1 20 11.5Zm-8.4 6.4c1.4 0 2.7-.4 3.8-1.1l.3-.2 2.2.6-.6-2.1.2-.3a6.6 6.6 0 1 0-2.2 2.2l.3.2c-1.1.7-2.4 1.1-3.8 1.1Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script src="js/hotel-data.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>

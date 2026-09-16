@@ -1,5 +1,5 @@
 /* ============================================================
-   AURELIA BAY — main.js
+   NIKOPS ROYAL HOTEL — main.js
    Vanilla ES2017+. No frameworks, no jQuery, no animation libs.
    Every module is a no-op when its markup is absent, so a single
    bundle is safe to ship on every page.
@@ -391,12 +391,19 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        var el = entry.target, target = Number(el.dataset.count), suffix = el.dataset.suffix || '';
+        var el = entry.target, raw = el.dataset.count, target = Number(raw);
+        var suffix = el.dataset.suffix || '';
+        // Preserve decimal precision (e.g. a 4.6 guest rating must not round to 5)
+        var dot = raw.indexOf('.');
+        var decimals = dot === -1 ? 0 : raw.length - dot - 1;
         var t0 = performance.now(), dur = 1500;
         (function step(now) {
           var p = Math.min(1, (now - t0) / dur);
           var eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = Math.round(target * eased).toLocaleString() + suffix;
+          var v = target * eased;
+          el.textContent = (decimals
+            ? v.toFixed(decimals)
+            : Math.round(v).toLocaleString()) + suffix;
           if (p < 1) requestAnimationFrame(step);
         })(t0);
         io.unobserve(el);

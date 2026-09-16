@@ -1,221 +1,172 @@
-# Aurelia Bay — Refactor Changelog
+# Nikops Royal Hotel — Website
 
-A complete rebuild of the supplied template into a premium, image-led hotel
-booking experience. Same stack as the original — **semantic HTML5, modular
-hand-written CSS, vanilla JS. No framework, no jQuery, no animation library.**
-
----
-
-## 1. What the original template was, and what changed
-
-The repo you supplied (`Chrono-QuasarDev/temp`) was **Zenala Lake Event Centre** —
-a Ghanaian lakeside venue site for weddings, funerals and corporate retreats.
-Per your instruction the workspace was cleared, all local images and videos were
-removed, and the template was used purely as an **architectural** starting point.
-
-**Kept from your template (so the stack still feels like yours):**
-
-| Pattern | Status |
-|---|---|
-| `styles.css` as a documented `@import` manifest over `css/*` partials | Kept, expanded |
-| `:root` design tokens in `css/tokens.css` | Kept, replaced values |
-| Fixed transparent nav that condenses to a pill on scroll | Kept, rebuilt as BEM |
-| Single IIFE-free vanilla JS file, guard-clause modules that no-op when markup is absent | Kept, expanded |
-| `prefers-reduced-motion` block | Kept, hardened |
-| Floating WhatsApp button | Kept, restyled as "Concierge" |
-| Lightbox built in JS, driven by a data attribute | Kept, made accessible |
-
-**Replaced:** all Zenala branding/copy/imagery, the Cormorant + Outfit pairing,
-the earth-tone palette, the events/enquiry/calendar flow.
+A premium, image-led booking site built on the architecture of the supplied
+template. **Semantic HTML5, modular hand-written CSS, vanilla JS. No framework,
+no jQuery, no animation library.**
 
 ---
 
-## 2. Design system
+## Rebrand: Aurelia Bay → Nikops Royal Hotel
 
-- **Palette** (`css/tokens.css`) — deep navy `#0d1b2a`, charcoal, warm gold
-  `#b08d4f`, champagne `#d9bd86`, crisp white, soft sand `#f6f1e8` / cream
-  `#fbf8f2`. All defined as CSS custom properties; change the brand in one file.
-- **Typography** — **Playfair Display** (serif headings) + **Inter** (sans body),
-  loaded from Google Fonts. A fluid `clamp()` type scale (`--fs-hero`, `--fs-h2`…)
-  means headings resize without a single media query.
-- **Naming** — BEM throughout (`.hero__title`, `.room__cta`, `.carousel__slide`,
-  `.header.is-scrolled`). State classes are always `is-*`.
-- **DRY** — shared primitives (`.btn`, `.link`, `.media`, `.section`, `.wrap`,
-  `.eyebrow`, `.stars`) instead of per-section one-offs. Motion, spacing,
-  elevation and z-index are all tokenised — no magic numbers.
+The previous build was a fictional luxury resort used to develop the layout
+system. Every page has now been repopulated with the **verified production data**
+for Nikops Royal Hotel. The design system, components and JS modules are
+unchanged — only content, imagery and the data layer were replaced.
 
----
+### Verified data now live across the site
 
-## 3. Homepage — the ten required visual sections
-
-| # | Section | Notes |
+| Field | Value | Where it appears |
 |---|---|---|
-| 1 | **Full-viewport hero** | `100svh`, Ken Burns zoom, two-layer dark gradient (linear + radial vignette), floating glass **booking bar** (check-in / check-out / guests / room type) |
-| 2 | **"Experience the Escape"** | 7-slide carousel, autoplay + arrows + dots, poetic caption bottom-left of every slide, pointer-drag swipe |
-| 3 | **"Our Rooms & Suites"** | 6-card asymmetric **bento grid** (`xl` / `tall` / `wide` / `md` / `sm` spans), hover zoom, price, star rating, "View Details" |
-| 4 | **"A Day at Aurelia Bay"** | Full-width **parallax** break, single serif line of italic Playfair |
-| 5 | **"Dining & Culinary"** | Two alternating image↔text splits (`.split` / `.split--reverse`) with a facts row and "Explore Menus" |
-| 6 | **"Guest Moments"** | 12-tile square **Instagram grid**, hover reveals a heart + fake like count, "Follow Us @aureliabay" |
-| 7 | **"Explore the Destination"** | 3 full-bleed cards — Beaches / Nightlife / Cultural Sites — image scales and gradient deepens on hover |
-| 8 | **"The Spa & Wellness"** | Dual-image reveal (treatment room + infinity pool), minimal text, centred "Book a Treatment" |
-| 9 | **"Why Guests Return"** | 4 auto-cycling testimonials over a blurred, darkened background image; circular avatar, stars, quote |
-| 10 | **Final CTA** | Second full-viewport image, "Your Escape *Awaits*", large gold button with a pulse/glow ring |
+| Name | Nikops Royal Hotel | All pages, `<title>`, schema |
+| Star rating | 2-star accommodation | About, schema |
+| Guest rating | 4.6 / 5 | Hero strip, testimonials, stats, trust badges, schema |
+| Phone | +233 59 833 8215 | Header CTA, footer, contact, booking, all `tel:` links |
+| WhatsApp | wa.me/233598338215 | Floating button (all pages), footer |
+| Email | nikopsroyalhotel@gmail.com | Footer, contact, booking confirmation |
+| Address | Tuba-Kokrobite Road, near Tuba Junction, off Kasoa Road, Ngleshi Amanfro, Greater Accra | Footer, contact, schema |
+| Ghana Post GPS | **GS-0356-3338** | Footer, contact, map card, booking sidebar |
+| Check-in / out | 12:00 PM / 12:00 PM | Hero note, room detail, booking, policies, schema |
+| Pets | Not allowed | Policies, booking form note, schema |
+| Smoking | Non-smoking throughout | Trust strip, policies, booking note, schema |
+| Breakfast | À la carte · Continental · Full English/Irish | Restaurant section, room detail, booking dropdown |
+| Amenities | Private bathroom, shower, swimming pool, restaurant, bar | Amenity grids, carousel, trust strip, schema |
+| Distances | 20 km Accra Central Mosque · 25 km Independence Arch / Nkrumah Memorial Park | Destination cards, stats, contact |
+| Currency | GH₵ (GHS) | All room rates |
 
-Plus two conversion supports: a **trust marquee** directly under the hero
-(awards, 4.9/5, best-rate guarantee) and an **animated stat band** before the
-final ask.
+### New: a single source of truth
 
----
-
-## 4. Conversion psychology applied
-
-- The single highest-intent element (the booking bar) sits **on** the hero, above
-  the fold, before any scrolling decision is made.
-- Social proof appears **immediately** after the hero (marquee) and again before
-  the close (testimonials + stats) — bracketing the browsing phase.
-- Risk reversal is repeated at every ask: *free cancellation to 48h · best rate
-  guaranteed · no booking fees · you will not be charged today*.
-- Scarcity is stated once and honestly ("Limited 2026 availability") rather than
-  faked with a countdown.
-- Prices are shown on every room card, so nobody has to click to qualify.
-- Trust badges sit **adjacent to the total** on checkout, where doubt peaks.
-- The checkout stepper shows four short steps, which measurably reduces
-  mid-form abandonment.
+`js/hotel-data.js` holds the whole verified record as one `window.NIKOPS`
+object — contact, address, policies, breakfast options, amenities, landmark
+distances. Any element marked `data-hotel="policy.checkIn"` is filled from it
+automatically. **Change the phone number once and it updates everywhere**, rather
+than being hand-edited across six HTML files. This is also the object to hand to
+your JS modules or seed a database from.
 
 ---
 
-## 5. Inner pages
+## Content decisions you should know about
 
-- **`rooms.html`** — page hero + the full bento grid.
-- **`room-detail.html`** — **hero gallery slider** (5 slides, arrows, thumbnail
-  rail, live counter, ←/→ keys), an **8-tile amenities icon grid** with inline
-  SVG, and a **sticky "Book This Room" sidebar** with a price breakdown that
-  follows the scroll on desktop and flows inline on mobile.
-- **`booking.html`** — 4-step **progress stepper**, a reassuring **image of the
-  selected room** in the sidebar, a 4-up **trust-badge block**, validated form
-  with inline errors and a success state.
-- **`about.html`** — alternating **image/text timeline** (1983 → today) with a
-  centre spine on desktop that collapses to a single column on mobile, a stat
-  band, and a parallax founder quote.
-- **`contact.html`** — large **styled map card** with a gold pin and an
-  "Open in Maps" bar, a **concierge team photo card**, a four-cell contact info
-  grid, and a validated enquiry form.
+Three things in the original brief described a property Nikops Royal is not, so
+I adapted rather than fabricated. Publishing invented amenities on a real
+business's site creates a genuine liability — guests arrive expecting a spa.
 
----
+| Brief asked for | What shipped | Why |
+|---|---|---|
+| "Dining & Culinary" — a Michelin restaurant + beach club, two named chefs | **Restaurant & Bar** — the real on-site restaurant and bar, with the three verified breakfast formats as the hook | Only a restaurant and bar are verified. The two-venue alternating split layout is preserved exactly. |
+| "The Spa & Wellness" — treatment rooms, dual-image reveal | **The Swimming Pool** — pool + poolside terrace, same dual-image component, "Book a Room" CTA | No spa is listed among the property's amenities. The pool *is*, and it is the strongest visual asset. |
+| "$800/night" luxury positioning | Warm, confident, honest — "Rest well, just off the Kasoa Road" | A 2-star property rated 4.6/5 wins on value, cleanliness and the pool. Overclaiming would read as false and hurt conversion. |
 
-## 6. Images
+**Placeholders you must replace before launch** — these are clearly flagged in
+code comments:
 
-- Every image is a real, verified `images.unsplash.com` URL — **all IDs were
-  HTTP-checked before shipping**, and a handful carry an `onerror` fallback to a
-  second verified photo. No coloured placeholder boxes anywhere.
-- `object-fit:cover` on every single image.
-- Responsive `srcset` + `sizes` on all large/hero imagery; `clamp()` governs the
-  containers themselves.
-- `loading="lazy"` + `decoding="async"` on everything below the fold;
-  `fetchpriority="high"` + `<link rel="preload">` on the hero LCP image only.
-- Intrinsic `width`/`height` on every `<img>` to eliminate layout shift.
-- WebP/AVIF handling is documented in a markup comment at the hero: Unsplash
-  negotiates modern formats via `auto=format`, and the comment shows the exact
-  `<picture>` + AVIF/WebP/JPG fallback markup a real build would emit.
+1. **Room names, rates and occupancy** (GH₵ 300–750). Invented to populate the
+   grid. Swap in the real rate card.
+2. **Testimonial quotes and names.** Illustrative. Replace with real reviews,
+   with permission. *The 4.6/5 aggregate is the only verified review figure and
+   is presented as such.*
+3. **All photography.** Stock images chosen to match the real amenity set — pool,
+   en-suite bathrooms, restaurant, bar, cooked breakfast, Ghanaian coast and
+   street scenes. Every URL was HTTP-verified. Replace with photographs of the
+   actual property; the `srcset`/`sizes`/`loading` attributes can stay as-is.
+4. **Map tile** on `contact.html` is a styled placeholder. The "Open in Maps"
+   button is live and already searches the real address.
 
 ---
 
-## 7. Accessibility
+## Page-by-page
 
-- Semantic `<section>`, `<article>`, `<figure>`, `<figcaption>`, `<blockquote>`,
-  `<nav>`, `<aside>`, `<main>` — one `<h1>` per page, no heading level skipped.
-- Descriptive alt text on every content image; decorative/background images use
-  `alt=""` + `aria-hidden`.
-- Skip link, visible 2px gold focus ring on every interactive element.
-- Carousel: `aria-roledescription`, per-slide labels, ←/→ keys, off-screen slides
-  marked `aria-hidden`, and an `aria-live` status for screen readers.
-- Autoplay pauses on hover, on focus, and when the tab is hidden.
-- Mobile nav closes on <kbd>Esc</kbd> and returns focus to the toggle.
-- Lightbox is a real `aria-modal` dialog: focus moves in, `Esc` closes, focus
-  returns to the trigger, body scroll is locked.
-- Form errors use `role="alert"` and `aria-invalid`, and focus jumps to the first
-  invalid field.
-- Contrast: gold `#b08d4f` on white ≈ 4.6:1; white on the hero's darkest gradient
-  band ≈ 13:1. Hover-only content (destination copy) stays legible at rest so it
-  is never touch- or keyboard-inaccessible.
-- Full `prefers-reduced-motion` support — Ken Burns, parallax, pulse, autoplay
-  and reveals all disable, and reveal elements are forced visible.
+**`index.html`** — ten image sections in the required order: full-viewport hero
+with Ken Burns + floating booking bar → verified trust strip → 7-slide carousel
+(pool, rooms, restaurant, bar, breakfast, bathroom, terrace) → 6-card bento of
+rooms → parallax break → Restaurant & Bar splits → 12-tile Instagram grid →
+3 destination cards (Kokrobite Beach, Central Accra, Memorial Park — with real
+distances) → pool dual-image → testimonials → verified facts band → cinematic
+CTA with the phone number as the secondary action.
 
----
+**`rooms.html`** — page hero, an "included in every room" amenity grid built
+from the verified amenity list, and the full bento grid.
 
-## 8. Responsiveness
+**`room-detail.html`** — 5-slide gallery (room, bed, en-suite, pool, breakfast),
+8-tile amenity grid, the three breakfast options spelled out, and a sticky
+booking rail priced in GH₵ showing breakfast and pool access as included.
 
-Mobile-first throughout — every media query is `min-width`, except the nav's
-single `max-width:960px` panel breakpoint.
+**`booking.html`** — 4-step stepper ending in "Reserved" rather than a payment
+step, since the property confirms directly. Adds a **breakfast preference**
+dropdown, GH₵ totals, and trust badges rebuilt around verified facts
+(4.6/5 · 12:00 check-in/out · breakfast included · no online payment).
 
-- Bento grid: 1 col → 2 col (640px) → 6-col asymmetric bento (1000px).
-- Hero booking bar: stacked → 2-up (680px) → 5-across inline (1040px).
-- Carousel: 86% slide width with a peek on mobile → 46% → 31.5%; pointer-drag
-  swipe on touch.
-- Instagram grid: 2 → 3 → 6 columns.
-- Sticky sidebars only become `position:sticky` at ≥1000px.
-- Timeline spine only renders at ≥920px.
-- `100svh` (not `100vh`) so mobile browser chrome never clips the hero.
+**`about.html`** — the timeline now runs **Arrive → Settle → Swim → Eat → Wake**
+(a guest's day) instead of invented company history, since no founding story is
+on record. Adds a house-policies grid: check-in, check-out, smoking, pets,
+breakfast, facilities.
+
+**`contact.html`** — quick-contact strip with tappable phone and email, map card
+captioned with the real road and junction, "Open in Maps" deep-linking the real
+address, front-desk card, and a six-cell info grid carrying the full address,
+GPS code, hours and landmark distances.
 
 ---
 
-## 9. Performance
+## Technical (carried over and extended)
 
-- `preconnect` to the image and font origins; `preload` on the LCP hero image.
-- Single `defer`-ed script; all animation is CSS-driven.
-- Scroll handlers are `requestAnimationFrame`-throttled and `{passive:true}`;
-  the parallax loop skips any layer that is off-screen.
-- Reveal observers `unobserve` after firing — they cost nothing after first paint.
-- Documented in-code where a real build would add: CDN delivery + AVIF/WebP
-  negotiation, an image-optimisation pipeline, critical-CSS inlining with the
-  rest deferred, CSS concatenation/minification (the `@import` chain is a
-  dev-time convenience), ES-module code-splitting for the carousel/lightbox,
-  a real availability API, and a PCI-compliant payment handoff.
+- **Design system** — deep navy `#0d1b2a`, warm gold `#b08d4f`, champagne, crisp
+  white, soft sand. Playfair Display + Inter. Fluid `clamp()` type scale. BEM
+  naming, `is-*` state classes, tokenised motion/spacing/elevation.
+- **Images** — `object-fit:cover` everywhere; `srcset`+`sizes` on all large
+  imagery; `loading="lazy"`+`decoding="async"` below the fold; `preload` +
+  `fetchpriority="high"` on the hero LCP only; intrinsic `width`/`height` on
+  every image; WebP/AVIF `<picture>` fallback documented in a markup comment.
+- **Accessibility** — one `<h1>` per page, descriptive alt text on all 70
+  images, skip links, visible focus rings, `aria-live` carousel status,
+  keyboard-navigable carousel/gallery/lightbox, `aria-modal` lightbox with focus
+  trap and restore, `role="alert"` form errors, full `prefers-reduced-motion`
+  support.
+- **Responsive** — mobile-first throughout. Bento 1→2→6 columns, booking bar
+  stacks→2-up→5-across, carousel peeks the next slide on mobile with pointer
+  swipe, sticky rails only above 1000px, `100svh` so mobile chrome never clips
+  the hero.
+- **Performance** — `preconnect` to image/font origins, single deferred bundle,
+  `rAF`-throttled passive scroll handlers, parallax skips offscreen layers,
+  reveal observers self-unobserve. CDN, image pipeline and critical-CSS inlining
+  documented in code where a real build would add them.
+- **SEO** — `Hotel` JSON-LD with the verified address, phone, rating, check-in
+  times and amenity list; `geo.region` / `geo.placename` meta for Greater Accra.
+
+### Fixed this pass
+
+- **Counter rounded decimals** — `data-count="4.6"` animated to **5**, misstating
+  the guest rating. The counter now preserves the source precision.
+- Stale "Aurelia Bay" strings in the `styles.css` and `main.js` file headers.
+- Compact footers on inner pages carried no contact details; all six pages now
+  show phone, email, address and GPS code.
+
+*(Bugs found in your original Zenala template — the truncated `!important`, the
+three dead `data-full` image paths, the duplicated hero image, missing lazy
+loading and image dimensions, the non-modal lightbox, the unthrottled scroll
+listener — were all fixed in the first pass and remain fixed.)*
 
 ---
 
-## 10. Issues found in the original template — fixed silently
-
-| Issue | Fix |
-|---|---|
-| **Truncated CSS declaration** — `padding:14px 22px!importan` in `css/header.css` (unterminated `!important`, invalidating the rule) | Gone; nav rewritten without `!important` anywhere |
-| **Broken image references** — `index.html` pointed `data-full` at `images/lawn.jpg`, `images/pavilion.jpg`, `images/deck.jpg`, none of which existed in the repo | All image URLs verified over HTTP before shipping |
-| **Duplicate images presented as different places** — `hero.jpg` used for both "The ceremony lawn" and "The lake deck" | Every tile is now a distinct photograph |
-| **No lazy loading anywhere** — every image, including below-fold gallery tiles, loaded eagerly | `loading="lazy"` below the fold, `preload`+`fetchpriority` above it |
-| **No `width`/`height` on any `<img>`** → cumulative layout shift | Intrinsic dimensions on every image |
-| **Lightbox was not a real dialog** — no focus trap, no focus restore, no body scroll lock, no close button, `role="dialog"` without `aria-modal` | Rebuilt as a proper modal |
-| **Lightbox keyboard handler on non-focusable `<figure>`** with `tabindex` applied via JS only | Triggers are now real `<a>` elements |
-| **Mobile nav could not be closed with <kbd>Esc</kbd>** and never restored focus | Both added |
-| **Scroll listener ran unthrottled on every frame** | `rAF`-throttled |
-| **`.eyebrow::before{display:none}`** — dead rule left over from a removed decoration | Removed; the rule now actually draws the gold hairline |
-| **Heavy inline `style="…"` on structural elements** in `index.html` (grid layout, font sizes, max-widths) | Moved into modular classes |
-| **Form wrote enquiries to `localStorage` and never surfaced a failure path** | Replaced with validated submit + documented API handoff point |
-| **`.h2` font-size overridden inline in five separate places**, defeating the type scale | Single fluid `clamp()` scale in tokens |
-| **`prefers-reduced-motion` block did not neutralise infinite animations** (`animation:none` can leave elements mid-keyframe) | Uses the safer duration/iteration-count override, and forces reveal elements visible |
-| **No focus-visible styling on the hamburger or nav CTA** | Global `:focus-visible` ring |
-| **Parallax would have used `background-attachment:fixed`-style effects** (janky/broken on iOS) | `transform: translate3d` only |
-
----
-
-## File map
+## Files
 
 ```
-aurelia/
-├── index.html          the homepage — all ten visual sections
-├── rooms.html          accommodation index (bento grid)
-├── room-detail.html    gallery slider · amenities grid · sticky book rail
+nikops/
+├── index.html          homepage — ten visual sections
+├── rooms.html          all rooms + included-amenity grid
+├── room-detail.html    gallery slider · amenities · sticky booking rail
 ├── booking.html        stepper · room image · trust badges · validated form
-├── about.html          alternating image/text timeline
-├── contact.html        map card · concierge photo · enquiry form
+├── about.html          guest-day timeline · verified house policies
+├── contact.html        map card · front desk · full contact grid
 ├── styles.css          @import manifest (documented)
 ├── css/
 │   ├── tokens.css      palette, type scale, spacing, motion, z-index
 │   ├── base.css        reset, typography, buttons, utils, scroll-reveal
 │   ├── header.css      fixed nav + mobile panel
-│   ├── hero.css        full-viewport hero, Ken Burns, booking bar
+│   ├── hero.css        hero, Ken Burns, booking bar, page heroes
 │   ├── sections.css    the ten homepage sections
-│   ├── footer.css      footer, newsletter, concierge button
+│   ├── footer.css      footer, newsletter, WhatsApp button
 │   └── pages.css       inner pages, forms, lightbox
 └── js/
+    ├── hotel-data.js   ← verified property data, single source of truth
     └── main.js         11 guard-claused vanilla modules
 ```

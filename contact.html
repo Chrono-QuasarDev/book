@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact &amp; Directions — Aurelia Bay</title>
-<meta name="description" content="Reach the Aurelia Bay concierge team, or find your way to the bay by car, air or sea.">
+<title>Contact &amp; Directions — Nikops Royal Hotel, Accra</title>
+<meta name="description" content="Nikops Royal Hotel, Tuba-Kokrobite Road near Tuba Junction, off Kasoa Road, Ngleshi Amanfro, Greater Accra. Call +233 59 833 8215 or email nikopsroyalhotel@gmail.com. GPS GS-0356-3338.">
 <meta name="theme-color" content="#0d1b2a">
 <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
@@ -14,16 +14,16 @@
 
 <header class="header">
   <div class="header__inner">
-    <a class="header__brand" href="index.html" aria-label="Aurelia Bay — home">
-      <span class="header__brand-name">Aurelia Bay</span>
-      <span class="header__brand-sub">Resort &amp; Spa</span>
+    <a class="header__brand" href="index.html" aria-label="Nikops Royal Hotel — home">
+      <span class="header__brand-name">Nikops Royal</span>
+      <span class="header__brand-sub">Hotel · Accra</span>
     </a>
     <button class="header__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
     <nav class="header__nav" id="primary-nav" aria-label="Primary">
       <a class="header__link" href="index.html">Home</a>
-      <a class="header__link" href="rooms.html">Rooms &amp; Suites</a>
-      <a class="header__link" href="index.html#dining">Dining</a>
-      <a class="header__link" href="index.html#spa">Spa</a>
+      <a class="header__link" href="rooms.html">Rooms</a>
+      <a class="header__link" href="index.html#dining">Restaurant &amp; Bar</a>
+      <a class="header__link" href="index.html#pool">Pool</a>
       <a class="header__link" href="about.html">About</a>
       <a class="header__link" href="contact.html" aria-current="page">Contact</a>
       <a class="header__cta" href="booking.html">Book Now</a>
@@ -37,59 +37,94 @@
   <div class="pagehero__media">
     <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80"
          sizes="100vw" fetchpriority="high"
-         alt="The resort's lit terraces above a calm bay in the last light of evening">
+         alt="The hotel pool and terrace lit in the evening">
   </div>
   <div class="pagehero__overlay" aria-hidden="true"></div>
   <div class="wrap">
     <span class="eyebrow eyebrow--light">Contact</span>
-    <h1>We answer quickly.</h1>
-    <p>Reservations, dining, spa, or a question you are not sure who to ask — start here.</p>
+    <h1>Talk to the front desk.</h1>
+    <p>Call, WhatsApp or email — bookings, directions, or a question about the rooms.</p>
   </div>
 </section>
+
+<!-- Quick contact strip — the three things people actually came for -->
+<div class="marquee">
+  <div class="wrap marquee__row">
+    <span><i></i><a href="tel:+233598338215">+233 59 833 8215</a></span>
+    <span><i></i><a href="mailto:nikopsroyalhotel@gmail.com">nikopsroyalhotel@gmail.com</a></span>
+    <span><i></i>GPS: GS-0356-3338</span>
+  </div>
+</div>
 
 <section class="section section--sand" id="directions">
   <div class="wrap contact">
 
-    <!-- ---------- Left: map + concierge team ---------- -->
+    <!-- ---------- Left: map + front desk ---------- -->
     <div>
-      <!-- MAP: a styled static placeholder. In production this is a lazy-loaded
-           Mapbox GL / Google Static Maps tile, only initialised on interaction
-           so the third-party JS never blocks the first paint. -->
+      <!-- MAP: styled static placeholder. In production this is a lazy-loaded
+           Google Maps / Mapbox embed centred on Ghana Post GPS GS-0356-3338,
+           initialised only on interaction so third-party JS never blocks the
+           first paint. -->
       <figure class="mapcard" data-reveal>
         <div class="mapcard__img">
           <img loading="lazy" decoding="async" width="1000" height="750"
             src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80"
-            onerror="this.src='https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80'"
-            alt="Map of the coastline showing the headland road leading to Aurelia Bay">
+            alt="Map showing the Tuba-Kokrobite Road and Tuba Junction off the Kasoa Road">
         </div>
         <span class="mapcard__pin" aria-hidden="true"></span>
         <figcaption class="mapcard__bar">
-          <span><b>Estrada da Ponta, Aurelia Bay</b><span>8600 · Atlantic Coast</span></span>
-          <a class="btn btn--gold" href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Open in Maps</a>
+          <span>
+            <b>Tuba-Kokrobite Road</b>
+            <span>Near Tuba Junction, off Kasoa Road · Ngleshi Amanfro</span>
+          </span>
+          <a class="btn btn--gold"
+             href="https://www.google.com/maps/search/?api=1&query=Nikops+Royal+Hotel+Tuba+Junction+Kasoa+Road+Ngleshi+Amanfro+Accra"
+             target="_blank" rel="noopener noreferrer">Open in Maps</a>
         </figcaption>
       </figure>
 
-      <!-- Concierge team photo — faces build trust faster than copy -->
+      <!-- Front desk — a face makes the phone number feel answerable -->
       <div class="teamcard mt-32" data-reveal>
         <img loading="lazy" decoding="async" width="300" height="300"
           src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
-          alt="Marco Ferreira, head concierge, at the front desk">
+          alt="A member of the front desk team at the reception counter">
         <div>
-          <span class="eyebrow">Your first call</span>
-          <h2 class="mt-8" style="font-size:1.4rem">Marco Ferreira</h2>
-          <p class="field__hint" style="font-size:.85rem">Head Concierge · 14 years at the bay</p>
-          <p class="lede mt-16" style="font-size:.95rem">“Tell me what you want the trip to feel
-            like and I will handle the rest — boats, tables, cars, and the things that are not
-            on any list.”</p>
-          <a class="link mt-16" href="tel:+10000000000" style="color:var(--gold)">+1 000 000 0000 <span aria-hidden="true">→</span></a>
+          <span class="eyebrow">Reception</span>
+          <h2 class="mt-8" style="font-size:1.4rem">The Front Desk</h2>
+          <p class="field__hint" style="font-size:.85rem">Bookings · directions · anything else</p>
+          <p class="lede mt-16" style="font-size:.95rem">Reception handles reservations directly.
+            Call or send a WhatsApp message and we will confirm your room and tell you exactly
+            how to find us from Tuba Junction.</p>
+          <a class="link mt-16" href="tel:+233598338215" style="color:var(--gold)">+233 59 833 8215 <span aria-hidden="true">→</span></a>
         </div>
       </div>
 
       <div class="infogrid mt-32" data-reveal>
-        <div><h4>Reservations</h4><p><a href="tel:+10000000000">+1 000 000 0000</a><br><a href="mailto:stay@aureliabay.com">stay@aureliabay.com</a></p></div>
-        <div><h4>Dining</h4><p><a href="mailto:solane@aureliabay.com">solane@aureliabay.com</a><br>Daily 09:00 – 21:00</p></div>
-        <div><h4>Spa</h4><p><a href="mailto:spa@aureliabay.com">spa@aureliabay.com</a><br>Daily 08:00 – 20:00</p></div>
-        <div><h4>Getting here</h4><p>55 min from the international airport.<br>Transfers arranged on request.</p></div>
+        <div>
+          <h4>Phone &amp; WhatsApp</h4>
+          <p><a href="tel:+233598338215">+233 59 833 8215</a></p>
+        </div>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:nikopsroyalhotel@gmail.com">nikopsroyalhotel@gmail.com</a></p>
+        </div>
+        <div>
+          <h4>Address</h4>
+          <p>Tuba-Kokrobite Road<br>Near Tuba Junction, off Kasoa Road<br>Ngleshi Amanfro, Greater Accra, Ghana</p>
+        </div>
+        <div>
+          <h4>Digital address (GPS)</h4>
+          <p><strong>GS-0356-3338</strong><br>Ghana Post GPS</p>
+        </div>
+        <div>
+          <h4>Check-in / Check-out</h4>
+          <p>From 12:00 PM / By 12:00 PM</p>
+        </div>
+        <div>
+          <h4>Getting here</h4>
+          <p>About 20 km from Accra Central Mosque and 25 km from Independence Arch and
+            Kwame Nkrumah Memorial Park.</p>
+        </div>
       </div>
     </div>
 
@@ -97,8 +132,8 @@
     <div>
       <span class="eyebrow" data-reveal>Send a message</span>
       <h2 class="mt-16" data-reveal style="font-size:clamp(1.8rem,1.3rem + 2vw,2.6rem)">How can we help?</h2>
-      <p class="lede mt-16" data-reveal>We reply to everything within one business day, usually
-        much sooner.</p>
+      <p class="lede mt-16" data-reveal>Reception reads everything that comes in. For anything
+        urgent, calling is fastest.</p>
 
       <form class="form mt-32" data-validate data-reveal>
         <div class="field">
@@ -114,16 +149,16 @@
           </div>
           <div class="field">
             <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel">
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+233 …">
           </div>
         </div>
         <div class="field">
           <label for="topic">What is this about?</label>
           <select id="topic" name="topic">
             <option>A room booking</option>
-            <option>Restaurant reservation</option>
-            <option>Spa treatment</option>
-            <option>A private event or wedding</option>
+            <option>Restaurant or bar</option>
+            <option>Directions to the hotel</option>
+            <option>An event or group stay</option>
             <option>Something else</option>
           </select>
         </div>
@@ -137,9 +172,12 @@
 
       <div class="form__ok" data-form-ok>
         <h2 style="font-size:1.5rem">Thank you, <span data-echo-name>friend</span>.</h2>
-        <p class="lede mt-16">Your message is with the concierge desk. Expect a reply within one
-          business day — sooner if it is about a table tonight.</p>
-        <a class="btn btn--navy mt-24" href="index.html">Back to the resort</a>
+        <p class="lede mt-16">Your message is with reception. We will reply as soon as we can —
+          if it is urgent, please call.</p>
+        <p class="lede mt-16">
+          <a href="tel:+233598338215" style="color:var(--gold)">+233 59 833 8215</a>
+        </p>
+        <a class="btn btn--navy mt-24" href="index.html">Back to the hotel</a>
       </div>
     </div>
 
@@ -149,17 +187,21 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap footer__bottom" style="border-top:0;margin-top:0">
-    <span>© <span data-year>2026</span> Aurelia Bay Resort &amp; Spa</span>
+  <div class="wrap footer__bottom" style="border-top:0;margin-top:0;align-items:flex-start">
+    <span>© <span data-year>2026</span> Nikops Royal Hotel · Ngleshi Amanfro, Ghana<br>
+      Tuba-Kokrobite Road, near Tuba Junction, off Kasoa Road · GPS GS-0356-3338<br>
+      <a href="tel:+233598338215">+233 59 833 8215</a> ·
+      <a href="mailto:nikopsroyalhotel@gmail.com">nikopsroyalhotel@gmail.com</a></span>
     <nav aria-label="Legal"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="about.html">About</a></nav>
   </div>
 </footer>
 
-<a class="concierge" href="https://wa.me/10000000000" target="_blank" rel="noopener noreferrer">
+<a class="concierge" href="https://wa.me/233598338215" target="_blank" rel="noopener noreferrer">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5A8.5 8.5 0 0 1 7.4 18.7L4 20l1.4-3.3A8.5 8.5 0 1 1 20 11.5Zm-8.4 6.4c1.4 0 2.7-.4 3.8-1.1l.3-.2 2.2.6-.6-2.1.2-.3a6.6 6.6 0 1 0-2.2 2.2l.3.2c-1.1.7-2.4 1.1-3.8 1.1Z"/></svg>
-  <span>Concierge</span>
+  <span>WhatsApp</span>
 </a>
 
+<script src="js/hotel-data.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
