@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact &amp; Directions — Aurelia Bay</title>
+<meta name="description" content="Reach the Aurelia Bay concierge team, or find your way to the bay by car, air or sea.">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="header__brand" href="index.html" aria-label="Aurelia Bay — home">
+      <span class="header__brand-name">Aurelia Bay</span>
+      <span class="header__brand-sub">Resort &amp; Spa</span>
+    </a>
+    <button class="header__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="header__nav" id="primary-nav" aria-label="Primary">
+      <a class="header__link" href="index.html">Home</a>
+      <a class="header__link" href="rooms.html">Rooms &amp; Suites</a>
+      <a class="header__link" href="index.html#dining">Dining</a>
+      <a class="header__link" href="index.html#spa">Spa</a>
+      <a class="header__link" href="about.html">About</a>
+      <a class="header__link" href="contact.html" aria-current="page">Contact</a>
+      <a class="header__cta" href="booking.html">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="pagehero" style="min-height:52svh">
+  <div class="pagehero__media">
+    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80"
+         sizes="100vw" fetchpriority="high"
+         alt="The resort's lit terraces above a calm bay in the last light of evening">
+  </div>
+  <div class="pagehero__overlay" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow eyebrow--light">Contact</span>
+    <h1>We answer quickly.</h1>
+    <p>Reservations, dining, spa, or a question you are not sure who to ask — start here.</p>
+  </div>
+</section>
+
+<section class="section section--sand" id="directions">
+  <div class="wrap contact">
+
+    <!-- ---------- Left: map + concierge team ---------- -->
+    <div>
+      <!-- MAP: a styled static placeholder. In production this is a lazy-loaded
+           Mapbox GL / Google Static Maps tile, only initialised on interaction
+           so the third-party JS never blocks the first paint. -->
+      <figure class="mapcard" data-reveal>
+        <div class="mapcard__img">
+          <img loading="lazy" decoding="async" width="1000" height="750"
+            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80"
+            onerror="this.src='https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80'"
+            alt="Map of the coastline showing the headland road leading to Aurelia Bay">
+        </div>
+        <span class="mapcard__pin" aria-hidden="true"></span>
+        <figcaption class="mapcard__bar">
+          <span><b>Estrada da Ponta, Aurelia Bay</b><span>8600 · Atlantic Coast</span></span>
+          <a class="btn btn--gold" href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Open in Maps</a>
+        </figcaption>
+      </figure>
+
+      <!-- Concierge team photo — faces build trust faster than copy -->
+      <div class="teamcard mt-32" data-reveal>
+        <img loading="lazy" decoding="async" width="300" height="300"
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+          alt="Marco Ferreira, head concierge, at the front desk">
+        <div>
+          <span class="eyebrow">Your first call</span>
+          <h2 class="mt-8" style="font-size:1.4rem">Marco Ferreira</h2>
+          <p class="field__hint" style="font-size:.85rem">Head Concierge · 14 years at the bay</p>
+          <p class="lede mt-16" style="font-size:.95rem">“Tell me what you want the trip to feel
+            like and I will handle the rest — boats, tables, cars, and the things that are not
+            on any list.”</p>
+          <a class="link mt-16" href="tel:+10000000000" style="color:var(--gold)">+1 000 000 0000 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="infogrid mt-32" data-reveal>
+        <div><h4>Reservations</h4><p><a href="tel:+10000000000">+1 000 000 0000</a><br><a href="mailto:stay@aureliabay.com">stay@aureliabay.com</a></p></div>
+        <div><h4>Dining</h4><p><a href="mailto:solane@aureliabay.com">solane@aureliabay.com</a><br>Daily 09:00 – 21:00</p></div>
+        <div><h4>Spa</h4><p><a href="mailto:spa@aureliabay.com">spa@aureliabay.com</a><br>Daily 08:00 – 20:00</p></div>
+        <div><h4>Getting here</h4><p>55 min from the international airport.<br>Transfers arranged on request.</p></div>
+      </div>
+    </div>
+
+    <!-- ---------- Right: enquiry form ---------- -->
+    <div>
+      <span class="eyebrow" data-reveal>Send a message</span>
+      <h2 class="mt-16" data-reveal style="font-size:clamp(1.8rem,1.3rem + 2vw,2.6rem)">How can we help?</h2>
+      <p class="lede mt-16" data-reveal>We reply to everything within one business day, usually
+        much sooner.</p>
+
+      <form class="form mt-32" data-validate data-reveal>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required data-error="Please tell us your name.">
+          <p class="field__error" role="alert"></p>
+        </div>
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required data-error="Please enter a valid email.">
+            <p class="field__error" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="topic">What is this about?</label>
+          <select id="topic" name="topic">
+            <option>A room booking</option>
+            <option>Restaurant reservation</option>
+            <option>Spa treatment</option>
+            <option>A private event or wedding</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required data-error="Please add a short message."></textarea>
+          <p class="field__error" role="alert"></p>
+        </div>
+        <button class="btn btn--gold btn--lg" type="submit">Send Message</button>
+      </form>
+
+      <div class="form__ok" data-form-ok>
+        <h2 style="font-size:1.5rem">Thank you, <span data-echo-name>friend</span>.</h2>
+        <p class="lede mt-16">Your message is with the concierge desk. Expect a reply within one
+          business day — sooner if it is about a table tonight.</p>
+        <a class="btn btn--navy mt-24" href="index.html">Back to the resort</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__bottom" style="border-top:0;margin-top:0">
+    <span>© <span data-year>2026</span> Aurelia Bay Resort &amp; Spa</span>
+    <nav aria-label="Legal"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="about.html">About</a></nav>
+  </div>
+</footer>
+
+<a class="concierge" href="https://wa.me/10000000000" target="_blank" rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5A8.5 8.5 0 0 1 7.4 18.7L4 20l1.4-3.3A8.5 8.5 0 1 1 20 11.5Zm-8.4 6.4c1.4 0 2.7-.4 3.8-1.1l.3-.2 2.2.6-.6-2.1.2-.3a6.6 6.6 0 1 0-2.2 2.2l.3.2c-1.1.7-2.4 1.1-3.8 1.1Z"/></svg>
+  <span>Concierge</span>
+</a>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

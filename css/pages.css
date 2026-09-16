@@ -1,0 +1,211 @@
+/* ============================================================
+   pages.css — inner pages
+   room detail (gallery slider + sticky booking rail) · checkout
+   (stepper + trust badges) · about (timeline) · contact (map+team)
+   · forms · lightbox
+   ============================================================ */
+
+/* ============================================================
+   ROOM DETAIL — hero gallery slider
+   ============================================================ */
+.gallery{position:relative;padding-top:86px;background:var(--navy)}
+.gallery__stage{position:relative;aspect-ratio:16/10;max-height:78vh;overflow:hidden;background:var(--navy-2)}
+@media (max-width:700px){.gallery__stage{aspect-ratio:4/3}}
+.gallery__slide{
+  position:absolute;inset:0;opacity:0;visibility:hidden;
+  transition:opacity .8s var(--ease-out),visibility .8s,transform 1.4s var(--ease);
+  transform:scale(1.04);
+}
+.gallery__slide.is-active{opacity:1;visibility:visible;transform:scale(1)}
+.gallery__slide img{width:100%;height:100%;object-fit:cover}
+.gallery__nav{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(13,27,42,.45);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,.28);color:var(--white);
+  transition:background var(--t-fast);
+}
+.gallery__nav:hover{background:var(--gold)}
+.gallery__nav--prev{left:clamp(12px,2vw,28px)}
+.gallery__nav--next{right:clamp(12px,2vw,28px)}
+.gallery__nav svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5}
+.gallery__count{
+  position:absolute;right:clamp(12px,2vw,28px);bottom:clamp(12px,2vw,24px);z-index:3;
+  padding:8px 16px;border-radius:999px;background:rgba(13,27,42,.6);
+  color:var(--white);font-size:.75rem;letter-spacing:.14em;
+}
+.gallery__thumbs{display:flex;gap:8px;padding:12px var(--gutter);overflow-x:auto;background:var(--navy);scrollbar-width:thin}
+.gallery__thumb{
+  flex:0 0 106px;aspect-ratio:3/2;border-radius:3px;overflow:hidden;
+  opacity:.45;transition:opacity var(--t-fast),outline-color var(--t-fast);
+  outline:1px solid transparent;outline-offset:2px;padding:0;
+}
+.gallery__thumb img{width:100%;height:100%;object-fit:cover}
+.gallery__thumb[aria-selected="true"]{opacity:1;outline-color:var(--gold-2)}
+.gallery__thumb:hover{opacity:.85}
+
+/* Room detail two-column with sticky booking rail */
+.detail{display:grid;grid-template-columns:1fr;gap:clamp(32px,4vw,64px);align-items:start}
+@media (min-width:1000px){.detail{grid-template-columns:minmax(0,1.6fr) minmax(320px,.9fr)}}
+
+.bookcard{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:clamp(24px,2.6vw,34px);box-shadow:var(--shadow);
+}
+/* Sticky only where there is room for it; on mobile it just flows */
+@media (min-width:1000px){.bookcard{position:sticky;top:104px}}
+.bookcard__price{display:flex;align-items:baseline;gap:8px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.bookcard__price b{font-family:var(--display);font-size:2.4rem;font-weight:500;color:var(--navy);line-height:1}
+.bookcard__price span{font-size:.8rem;color:var(--stone)}
+.bookcard__rows{margin:20px 0 4px;font-size:.875rem}
+.bookcard__row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;color:var(--stone)}
+.bookcard__row strong{color:var(--ink);font-weight:500}
+.bookcard__total{
+  display:flex;justify-content:space-between;align-items:baseline;
+  margin-top:8px;padding-top:18px;border-top:1px solid var(--line);
+}
+.bookcard__total span{font-size:.6875rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--stone)}
+.bookcard__total b{font-family:var(--display);font-size:1.7rem;font-weight:500;color:var(--navy)}
+.bookcard__note{margin-top:16px;font-size:.75rem;color:var(--stone);text-align:center;line-height:1.6}
+
+/* ============================================================
+   CHECKOUT — progress stepper + trust badges
+   ============================================================ */
+.stepper{display:flex;align-items:center;gap:8px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}
+.stepper__step{display:flex;align-items:center;gap:11px;flex:none}
+.stepper__dot{
+  width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;
+  border:1px solid var(--line);background:var(--white);
+  font-size:.8rem;font-weight:600;color:var(--stone);
+}
+.stepper__label{font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);white-space:nowrap}
+.stepper__bar{width:clamp(18px,4vw,64px);height:1px;background:var(--line);flex:none}
+.stepper__step.is-done .stepper__dot{background:var(--gold);border-color:var(--gold);color:var(--white)}
+.stepper__step.is-done .stepper__label{color:var(--ink)}
+.stepper__step.is-current .stepper__dot{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.stepper__step.is-current .stepper__label{color:var(--navy)}
+@media (max-width:760px){.stepper__label{display:none}.stepper__bar{width:26px}}
+
+.checkout{display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,60px);align-items:start}
+@media (min-width:1000px){.checkout{grid-template-columns:minmax(0,1.35fr) minmax(320px,.85fr)}}
+
+.summary{border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;background:var(--white);box-shadow:var(--shadow-sm)}
+@media (min-width:1000px){.summary{position:sticky;top:104px}}
+.summary__media{aspect-ratio:16/10;overflow:hidden}
+.summary__media img{width:100%;height:100%;object-fit:cover}
+.summary__body{padding:clamp(22px,2.4vw,30px)}
+
+.trust{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);margin-top:24px;border-radius:var(--radius);overflow:hidden}
+.trust__item{background:var(--cream);padding:18px 16px;text-align:center}
+.trust__item svg{width:22px;height:22px;margin:0 auto 10px;stroke:var(--gold);fill:none;stroke-width:1.4}
+.trust__item b{display:block;font-size:.75rem;font-weight:600}
+.trust__item span{display:block;margin-top:4px;font-size:.6875rem;color:var(--stone);line-height:1.5}
+
+/* ============================================================
+   ABOUT — alternating image/text timeline
+   ============================================================ */
+.timeline{position:relative;display:flex;flex-direction:column;gap:clamp(40px,6vw,96px)}
+/* Centre spine only on wide screens */
+@media (min-width:920px){
+  .timeline::before{
+    content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;
+    background:linear-gradient(transparent,var(--line) 8%,var(--line) 92%,transparent);
+  }
+}
+.tl{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;position:relative}
+@media (min-width:920px){
+  .tl{grid-template-columns:1fr 96px 1fr;gap:0}
+  .tl__media{grid-column:1}
+  .tl__body{grid-column:3;padding-left:8px}
+  .tl--flip .tl__media{grid-column:3}
+  .tl--flip .tl__body{grid-column:1;text-align:right;padding-left:0;padding-right:8px}
+  .tl--flip .tl__body .eyebrow{flex-direction:row-reverse}
+  .tl__node{
+    grid-column:2;justify-self:center;
+    width:14px;height:14px;border-radius:50%;
+    background:var(--sand);border:1px solid var(--gold);
+    display:grid;place-items:center;
+  }
+  .tl__node::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+}
+@media (max-width:919px){.tl__node{display:none}}
+.tl__media{aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius)}
+.tl__media img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow) var(--ease)}
+.tl__media:hover img{transform:scale(1.05)}
+.tl__year{font-family:var(--display);font-size:clamp(2rem,1.4rem + 2.4vw,3.2rem);font-weight:500;color:var(--gold);line-height:1}
+.tl__body h3{margin-top:10px}
+.tl__body p{margin-top:14px;color:var(--stone);font-weight:300}
+
+/* ============================================================
+   CONTACT — map panel + team photo
+   ============================================================ */
+.contact{display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,64px);align-items:start}
+@media (min-width:960px){.contact{grid-template-columns:1fr 1fr}}
+.mapcard{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--navy)}
+.mapcard__img{aspect-ratio:4/3}
+.mapcard__img img{width:100%;height:100%;object-fit:cover;filter:saturate(.75) contrast(1.05)}
+.mapcard__pin{
+  position:absolute;top:44%;left:50%;transform:translate(-50%,-100%);z-index:2;
+  width:36px;height:36px;border-radius:50% 50% 50% 4px;transform-origin:bottom left;
+  background:var(--gold);box-shadow:0 10px 26px rgba(13,27,42,.4);rotate:-45deg;
+}
+.mapcard__pin::after{content:"";position:absolute;inset:11px;border-radius:50%;background:var(--white)}
+.mapcard__bar{
+  display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  padding:20px 24px;background:var(--navy);color:var(--white);
+}
+.mapcard__bar b{font-family:var(--display);font-size:1.1rem;font-weight:500}
+.mapcard__bar span{display:block;font-size:.78rem;color:rgba(255,255,255,.6)}
+
+.teamcard{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:clamp(22px,2.4vw,32px);background:var(--cream);border:1px solid var(--line);border-radius:var(--radius-lg)}
+@media (min-width:520px){.teamcard{grid-template-columns:150px 1fr}}
+.teamcard img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--radius)}
+
+.infogrid{display:grid;grid-template-columns:1fr;gap:2px;background:var(--line);border-radius:var(--radius);overflow:hidden}
+@media (min-width:560px){.infogrid{grid-template-columns:repeat(2,1fr)}}
+.infogrid div{background:var(--white);padding:24px}
+.infogrid h4{font-size:.625rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.infogrid p,.infogrid a{font-size:.9rem;color:var(--ink);font-weight:300;line-height:1.7}
+.infogrid a:hover{color:var(--gold)}
+
+/* ============================================================
+   FORMS
+   ============================================================ */
+.form{display:flex;flex-direction:column;gap:18px}
+.form__row{display:grid;grid-template-columns:1fr;gap:18px}
+@media (min-width:600px){.form__row--2{grid-template-columns:1fr 1fr}}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:.625rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--stone)}
+.field input,.field select,.field textarea{
+  width:100%;padding:15px 18px;border-radius:var(--radius);
+  border:1px solid var(--line);background:var(--white);
+  font-size:.95rem;transition:border-color var(--t-fast),box-shadow var(--t-fast);
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(176,141,79,.14);
+}
+.field textarea{min-height:130px;resize:vertical}
+.field__hint{font-size:.72rem;color:var(--stone)}
+.field__error{font-size:.72rem;color:#b3261e;min-height:1em}
+.field.has-error input,.field.has-error select{border-color:#b3261e}
+
+.form__ok{display:none;padding:30px;border-radius:var(--radius-lg);background:var(--cream);border:1px solid var(--gold-2)}
+.form__ok.is-shown{display:block;animation:navDrop .5s var(--ease-out)}
+
+/* ============================================================
+   LIGHTBOX (gallery / instagram grid)
+   ============================================================ */
+.lightbox{
+  position:fixed;inset:0;z-index:var(--z-modal);display:none;
+  place-items:center;padding:clamp(16px,4vw,56px);
+  background:rgba(8,18,28,.94);backdrop-filter:blur(6px);
+}
+.lightbox.is-open{display:grid;animation:navDrop .3s var(--ease-out)}
+.lightbox img{max-width:100%;max-height:86vh;object-fit:contain;border-radius:var(--radius)}
+.lightbox__close{
+  position:absolute;top:clamp(14px,3vw,30px);right:clamp(14px,3vw,30px);
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:var(--white);
+}
+.lightbox__close:hover{background:var(--gold);border-color:var(--gold)}
+.lightbox__close svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.6;fill:none}

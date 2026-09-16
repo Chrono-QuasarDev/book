@@ -1,0 +1,78 @@
+/* ============================================================
+   footer.css — footer, newsletter, floating concierge button
+   ============================================================ */
+
+.footer{background:#08121c;color:rgba(255,255,255,.66);padding:clamp(60px,7vw,100px) 0 32px}
+
+.footer__top{
+  display:grid;grid-template-columns:1fr;gap:clamp(32px,4vw,48px);
+  padding-bottom:clamp(40px,5vw,64px);border-bottom:1px solid rgba(255,255,255,.1);
+}
+@media (min-width:640px){.footer__top{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.footer__top{grid-template-columns:1.6fr 1fr 1fr 1.2fr}}
+
+.footer__brand-name{
+  font-family:var(--display);font-size:1.5rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--white);
+}
+.footer__brand-sub{display:block;margin-top:6px;font-size:.5625rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.footer__brand p{margin-top:20px;max-width:34ch;font-size:.875rem;font-weight:300;line-height:1.8}
+
+.footer__col h4{
+  font-size:.625rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold-2);margin-bottom:20px;
+}
+.footer__col li{margin-bottom:12px;font-size:.875rem;font-weight:300}
+.footer__col a{transition:color var(--t-fast)}
+.footer__col a:hover{color:var(--white)}
+
+.footer__news p{font-size:.875rem;font-weight:300;margin-bottom:18px}
+.footer__form{display:flex;gap:8px;flex-wrap:wrap}
+.footer__form input{
+  flex:1 1 180px;min-width:0;padding:14px 18px;border-radius:999px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
+  color:var(--white);font-size:.875rem;
+}
+.footer__form input::placeholder{color:rgba(255,255,255,.42)}
+.footer__form input:focus{outline:none;border-color:var(--gold)}
+.footer__form button{
+  padding:14px 26px;border-radius:999px;background:var(--gold);color:var(--white);
+  font-size:.6875rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  transition:background var(--t-fast);
+}
+.footer__form button:hover{background:#c39c58}
+.footer__msg{margin-top:12px;font-size:.78rem;color:var(--gold-2);min-height:1.2em}
+
+.footer__social{display:flex;gap:12px;margin-top:24px}
+.footer__social a{
+  width:40px;height:40px;border-radius:50%;display:grid;place-items:center;
+  border:1px solid rgba(255,255,255,.18);
+  transition:background var(--t-fast),border-color var(--t-fast),color var(--t-fast);
+}
+.footer__social a:hover{background:var(--gold);border-color:var(--gold);color:var(--white)}
+.footer__social svg{width:17px;height:17px;fill:currentColor}
+
+.footer__bottom{
+  margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;
+  justify-content:space-between;align-items:center;
+  font-size:.75rem;color:rgba(255,255,255,.45);
+}
+.footer__bottom nav{display:flex;gap:22px;flex-wrap:wrap}
+.footer__bottom a:hover{color:var(--white)}
+
+/* ---- Floating concierge / WhatsApp ---- */
+.concierge{
+  position:fixed;right:clamp(14px,2vw,26px);bottom:clamp(14px,2vw,26px);z-index:var(--z-float);
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 20px 13px 15px;border-radius:999px;
+  background:var(--navy);color:var(--white);
+  box-shadow:0 14px 34px rgba(13,27,42,.34);
+  font-size:.6875rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  transition:background var(--t-fast),transform var(--t-fast) var(--ease);
+}
+.concierge:hover{background:var(--gold);transform:translateY(-3px)}
+.concierge svg{width:19px;height:19px;fill:currentColor;flex:none}
+@media (max-width:560px){
+  .concierge span{display:none}
+  .concierge{padding:15px;border-radius:50%}
+}

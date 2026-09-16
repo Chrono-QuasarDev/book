@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rooms &amp; Suites — Aurelia Bay</title>
+<meta name="description" content="Forty-two ocean-facing rooms, suites and villas. Every one of them looks at water.">
+<meta name="theme-color" content="#0d1b2a">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="header__brand" href="index.html" aria-label="Aurelia Bay — home">
+      <span class="header__brand-name">Aurelia Bay</span>
+      <span class="header__brand-sub">Resort &amp; Spa</span>
+    </a>
+    <button class="header__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="header__nav" id="primary-nav" aria-label="Primary">
+      <a class="header__link" href="index.html">Home</a>
+      <a class="header__link" href="rooms.html" aria-current="page">Rooms &amp; Suites</a>
+      <a class="header__link" href="index.html#dining">Dining</a>
+      <a class="header__link" href="index.html#spa">Spa</a>
+      <a class="header__link" href="about.html">About</a>
+      <a class="header__link" href="contact.html">Contact</a>
+      <a class="header__cta" href="booking.html">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="pagehero">
+  <div class="pagehero__media">
+    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1920&q=80"
+         sizes="100vw" fetchpriority="high"
+         alt="Suite interior with an unmade linen bed facing floor-to-ceiling windows and the ocean">
+  </div>
+  <div class="pagehero__overlay" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow eyebrow--light">Accommodation</span>
+    <h1>Forty-two rooms.<br>Forty-two sea views.</h1>
+    <p>No courtyard rooms, no compromise category. If it has a window, it faces water.</p>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap">
+    <div class="bento">
+      <article class="room bento__item--xl" data-reveal>
+        <img loading="lazy" decoding="async" width="1400" height="900"
+          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=80"
+          sizes="(max-width:1000px) 100vw, 62vw"
+          alt="Panoramic penthouse living room with a wraparound terrace above the ocean">
+        <div class="room__body">
+          <div class="room__meta"><span class="room__tag">Signature</span></div>
+          <h2 class="room__name">The Aurelia Penthouse</h2>
+          <p class="room__price"><b>$1,850</b> / night · 180 m² · Sleeps 4</p>
+          <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="room bento__item--tall" data-reveal data-reveal-delay="1">
+        <img loading="lazy" decoding="async" width="800" height="1200"
+          src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"
+          sizes="(max-width:1000px) 100vw, 32vw"
+          alt="Cliff suite bedroom with a freestanding tub beside a full-height window">
+        <div class="room__body">
+          <div class="room__meta"><span class="room__tag">Ocean Front</span></div>
+          <h2 class="room__name">Cliff Suite</h2>
+          <p class="room__price"><b>$980</b> / night · 74 m²</p>
+          <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="room bento__item--md" data-reveal>
+        <img loading="lazy" decoding="async" width="1000" height="700"
+          src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1100&q=80"
+          sizes="(max-width:1000px) 100vw, 46vw"
+          alt="Ocean deluxe room with pale linens, timber floors and a private balcony">
+        <div class="room__body">
+          <div class="room__meta"><span class="room__tag">Most booked</span></div>
+          <h2 class="room__name">Ocean Deluxe</h2>
+          <p class="room__price"><b>$640</b> / night · 46 m²</p>
+          <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="room bento__item--md" data-reveal data-reveal-delay="1">
+        <img loading="lazy" decoding="async" width="1000" height="700"
+          src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1100&q=80"
+          sizes="(max-width:1000px) 100vw, 46vw"
+          alt="Garden villa terrace shaded by olive trees with a private plunge pool">
+        <div class="room__body">
+          <div class="room__meta"><span class="room__tag">Private pool</span></div>
+          <h2 class="room__name">Garden Villa</h2>
+          <p class="room__price"><b>$1,240</b> / night · 120 m²</p>
+          <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="room bento__item--sm" data-reveal>
+        <img loading="lazy" decoding="async" width="800" height="1000"
+          src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80"
+          sizes="(max-width:1000px) 100vw, 32vw"
+          alt="Corner junior suite with a curved reading nook facing the bay">
+        <div class="room__body">
+          <div class="room__meta"><span class="room__tag">Couples</span></div>
+          <h2 class="room__name">Bay Junior Suite</h2>
+          <p class="room__price"><b>$720</b> / night · 52 m²</p>
+          <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      <article class="room bento__item--wide" data-reveal data-reveal-delay="1">
+        <img loading="lazy" decoding="async" width="1200" height="800"
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+          sizes="(max-width:1000px) 100vw, 46vw"
+          alt="Two-bedroom family residence with an open-plan lounge opening onto a sun terrace">
+        <div class="room__body">
+          <div class="room__meta"><span class="room__tag">Families</span></div>
+          <h2 class="room__name">Headland Residence</h2>
+          <p class="room__price"><b>$1,480</b> / night · 150 m² · Sleeps 6</p>
+          <a class="room__cta" href="room-detail.html">View Details <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="finale" style="min-height:70svh">
+  <div class="finale__media" aria-hidden="true">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=80" alt="">
+  </div>
+  <div class="finale__overlay" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 data-reveal>Still deciding?</h2>
+    <p data-reveal data-reveal-delay="1">Our reservations team will match the room to the trip — tell them who is coming and why.</p>
+    <div class="finale__actions" data-reveal data-reveal-delay="2">
+      <a class="btn btn--gold btn--lg btn--pulse" href="booking.html">Check Availability</a>
+      <a class="btn btn--ghost btn--lg" href="contact.html">Speak to a Concierge</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__bottom" style="border-top:0;margin-top:0">
+    <span>© <span data-year>2026</span> Aurelia Bay Resort &amp; Spa</span>
+    <nav aria-label="Legal"><a href="index.html">Home</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

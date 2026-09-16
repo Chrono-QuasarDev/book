@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complete Your Booking — Aurelia Bay</title>
+<meta name="description" content="Secure your stay at Aurelia Bay. Free cancellation to 48 hours, best rate guaranteed, no booking fees.">
+<meta name="theme-color" content="#0d1b2a">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header is-scrolled">
+  <div class="header__inner">
+    <a class="header__brand" href="index.html" aria-label="Aurelia Bay — home">
+      <span class="header__brand-name">Aurelia Bay</span>
+      <span class="header__brand-sub">Resort &amp; Spa</span>
+    </a>
+    <button class="header__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    <nav class="header__nav" id="primary-nav" aria-label="Primary">
+      <a class="header__link" href="index.html">Home</a>
+      <a class="header__link" href="rooms.html">Rooms &amp; Suites</a>
+      <a class="header__link" href="about.html">About</a>
+      <a class="header__link" href="contact.html">Contact</a>
+      <a class="header__cta" href="tel:+10000000000">Call Reservations</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="section" style="padding-top:140px">
+  <div class="wrap">
+
+    <!-- Progress stepper — reduces abandonment by showing how short this is -->
+    <nav class="stepper" aria-label="Booking progress">
+      <div class="stepper__step is-done">
+        <span class="stepper__dot" aria-hidden="true">✓</span>
+        <span class="stepper__label">Choose room</span>
+      </div>
+      <span class="stepper__bar" aria-hidden="true"></span>
+      <div class="stepper__step is-current" aria-current="step">
+        <span class="stepper__dot" aria-hidden="true">2</span>
+        <span class="stepper__label">Your details</span>
+      </div>
+      <span class="stepper__bar" aria-hidden="true"></span>
+      <div class="stepper__step">
+        <span class="stepper__dot" aria-hidden="true">3</span>
+        <span class="stepper__label">Payment</span>
+      </div>
+      <span class="stepper__bar" aria-hidden="true"></span>
+      <div class="stepper__step">
+        <span class="stepper__dot" aria-hidden="true">4</span>
+        <span class="stepper__label">Confirmed</span>
+      </div>
+    </nav>
+
+    <div class="checkout mt-48">
+
+      <!-- ---------- Guest details ---------- -->
+      <div>
+        <span class="eyebrow">Step 2 of 4</span>
+        <h1 class="mt-16" style="font-size:clamp(1.9rem,1.4rem + 2.2vw,2.9rem)">Who is travelling?</h1>
+        <p class="lede mt-16">Two minutes. We will email a confirmation immediately and your
+          host will be in touch the week before you arrive.</p>
+
+        <form class="form mt-32" data-validate>
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label for="firstname">First name</label>
+              <input type="text" id="firstname" name="firstname" autocomplete="given-name" required data-error="Please enter your first name.">
+              <p class="field__error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="lastname">Last name</label>
+              <input type="text" id="lastname" name="lastname" autocomplete="family-name" required data-error="Please enter your last name.">
+              <p class="field__error" role="alert"></p>
+            </div>
+          </div>
+
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required data-error="We need a valid email for your confirmation.">
+              <p class="field__error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required data-error="Please enter a contact number.">
+              <p class="field__error" role="alert"></p>
+            </div>
+          </div>
+
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label for="checkin">Check in</label>
+              <input type="date" id="checkin" name="checkin" required data-error="Choose an arrival date.">
+              <p class="field__error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="checkout">Check out</label>
+              <input type="date" id="checkout" name="checkout" required data-error="Choose a departure date.">
+              <p class="field__error" role="alert"></p>
+            </div>
+          </div>
+
+          <div class="form__row form__row--2">
+            <div class="field">
+              <label for="guests">Guests</label>
+              <select id="guests" name="guests">
+                <option>1 guest</option><option selected>2 guests</option>
+                <option>3 guests</option><option>4 guests</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="arrival">Estimated arrival</label>
+              <select id="arrival" name="arrival">
+                <option>Before 15:00</option><option selected>15:00 – 18:00</option>
+                <option>18:00 – 22:00</option><option>After 22:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="requests">Anything we should know?</label>
+            <textarea id="requests" name="requests" placeholder="Allergies, an anniversary, a late flight — anything at all."></textarea>
+            <p class="field__hint">Requests are noted but not guaranteed until confirmed by your host.</p>
+          </div>
+
+          <button class="btn btn--gold btn--lg mt-16" type="submit">Continue to Payment</button>
+          <p class="field__hint center">You will not be charged until the next step.</p>
+        </form>
+
+        <div class="form__ok" data-form-ok>
+          <h2 style="font-size:1.6rem">Thank you, <span data-echo-name>traveller</span>.</h2>
+          <p class="lede mt-16">Your details are held. In a live build this step would hand off
+            to a PCI-compliant payment provider (Stripe / Adyen) and then to step four.</p>
+          <a class="btn btn--navy mt-24" href="index.html">Back to the resort</a>
+        </div>
+      </div>
+
+      <!-- ---------- Reassurance sidebar ---------- -->
+      <aside class="summary" aria-label="Booking summary">
+        <div class="summary__media">
+          <!-- Showing the room they chose keeps the purchase emotional, not transactional -->
+          <img loading="lazy" decoding="async" width="800" height="500"
+            src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+            alt="The Aurelia Penthouse living room with its wraparound clifftop terrace">
+        </div>
+        <div class="summary__body">
+          <span class="eyebrow">Your selection</span>
+          <h2 class="mt-16" style="font-size:1.5rem">The Aurelia Penthouse</h2>
+          <p class="field__hint mt-8">180 m² · Ocean front · Sleeps 4</p>
+
+          <div class="bookcard__rows mt-24">
+            <div class="bookcard__row"><span>Nights</span><strong>3</strong></div>
+            <div class="bookcard__row"><span>$1,850 × 3</span><strong>$5,550</strong></div>
+            <div class="bookcard__row"><span>Resort service</span><strong>$180</strong></div>
+            <div class="bookcard__row"><span>Direct-booking credit</span><strong>−$250</strong></div>
+          </div>
+          <div class="bookcard__total"><span>Total</span><b>$5,480</b></div>
+
+          <!-- Trust badges — placed adjacent to the total, where doubt peaks -->
+          <div class="trust">
+            <div class="trust__item">
+              <svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 8.1-7 9-4-0.9-7-4.6-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4" stroke-linecap="round"/></svg>
+              <b>Secure payment</b><span>256-bit encryption</span>
+            </div>
+            <div class="trust__item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>
+              <b>Free cancellation</b><span>Up to 48h before</span>
+            </div>
+            <div class="trust__item">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16v11H4zM4 11h16" stroke-linecap="round"/></svg>
+              <b>No booking fees</b><span>Ever, when direct</span>
+            </div>
+            <div class="trust__item">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.8 1.2 7L12 18l-6.2 3.2L7 14.2 2 9.4l7-.9z"/></svg>
+              <b>Best rate</b><span>Or we match it</span>
+            </div>
+          </div>
+
+          <p class="bookcard__note">Questions? Reservations answer in under a minute on
+            <a href="tel:+10000000000" style="color:var(--gold)">+1 000 000 0000</a>.</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__bottom" style="border-top:0;margin-top:0">
+    <span>© <span data-year>2026</span> Aurelia Bay Resort &amp; Spa</span>
+    <nav aria-label="Legal"><a href="#">Privacy</a><a href="#">Terms</a></nav>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

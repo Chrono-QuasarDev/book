@@ -1,0 +1,24 @@
+/* ============================================================
+   AURELIA BAY — master stylesheet
+   Edit the partial that matches what you are changing.
+
+   css/tokens.css    colour, type scale, spacing, motion tokens
+   css/base.css      reset, typography, buttons, utils, reveal
+   css/header.css    fixed nav + mobile panel
+   css/hero.css      full-viewport hero + booking bar + page heroes
+   css/sections.css  homepage visual sections (carousel → finale)
+   css/footer.css    footer, newsletter, concierge button
+   css/pages.css     inner pages, forms, lightbox
+
+   PERF NOTE: @import chains a request per file. A production build
+   would concatenate + minify these into one hashed asset, inline the
+   above-the-fold "critical CSS" (tokens, base, header, hero) in
+   <head>, and defer the rest with rel="preload" → onload.
+   ============================================================ */
+@import url('css/tokens.css');
+@import url('css/base.css');
+@import url('css/header.css');
+@import url('css/hero.css');
+@import url('css/sections.css');
+@import url('css/footer.css');
+@import url('css/pages.css');
